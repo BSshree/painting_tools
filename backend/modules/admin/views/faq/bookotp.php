@@ -239,6 +239,8 @@ $script = <<< JS
                 success: function(data) {
                 var result = JSON.parse( data );
                     if(result['mgs'] == "success"){
+                    $('#otp_no').val('');
+                $(".errorMessage").empty();
                         nextStepWizard.removeAttr('disabled').trigger('click');                    
                     }
                 }
