@@ -8,9 +8,13 @@ use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
 use frontend\assets\AppAsset;
+use frontend\assets\AppAssetPaint;
 use common\widgets\Alert;
+use yii\bootstrap\Modal;
 
-AppAsset::register($this);
+//AppAsset::register($this);
+AppAssetPaint::register($this);
+
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
@@ -25,62 +29,63 @@ AppAsset::register($this);
 </head>
 <body>
 <?php $this->beginBody() ?>
+ <?php  echo $this->render('@frontend/modules/admin/views/layouts/header'); ?> 
 
-<div class="wrap">
-    <?php
-    NavBar::begin([
-        'brandLabel' => 'Painting Tool',
-        'brandUrl' => Yii::$app->homeUrl,
-        'options' => [
-            'class' => 'navbar-inverse navbar-fixed-top',
-        ],
-    ]);
-    $menuItems = [
-        ['label' => 'Home', 'url' => ['/admin/site/index']],
-//        ['label' => 'About', 'url' => ['/admin/site/about']],
-//        ['label' => 'Contact', 'url' => ['/admin/site/contact']],
-        // ['label' => 'Book An Appointment', 'url' =>['/admin/faq/bookotp']],
-    ];
-    if (Yii::$app->user->isGuest) {
-        $menuItems[] = ['label' => 'Signup', 'url' => ['/admin/site/signup']];
-        $menuItems[] = ['label' => 'Login', 'url' => ['/admin/site/login']];
-//      /  $menuItems[] = ['label' => 'Book An Appointment', 'url' => ['/admin/faq/bookotp']];
-        
-    } else {
-        $menuItems[] = '<li>'
-            . Html::beginForm(['/admin/site/logout'], 'post')
-            . Html::submitButton(
-                'Logout (' . Yii::$app->user->identity->username . ')',
-                ['class' => 'btn btn-link logout']
-            )
-            . Html::endForm()
-            . '</li>';
-    }
-    echo Nav::widget([
-        'options' => ['class' => 'navbar-nav navbar-right'],
-        'items' => $menuItems,
-    ]);
-    NavBar::end();
-    ?>
-
-    <div class="container">
-        <?= Breadcrumbs::widget([
-            'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
-        ]) ?>
-        <?= Alert::widget() ?>
         <?= $content ?>
-    </div>
-</div>
-
-<!--<footer class="footer">
-    <div class="container">
-        <p class="pull-left">&copy; <?php //Html::encode(Yii::$app->name) ?> <?php //date('Y') ?></p>
-
-        <p class="pull-right"><?php // Yii::powered() ?></p>
-    </div>
-</footer>-->
+   
+     <?php echo $this->render('@frontend/modules/admin/views/layouts/footer'); ?> 
 
 <?php $this->endBody() ?>
+   
+<script>
+$(document).ready(function() {
+    $("#formvalidate").validate({
+        rules: {
+              'name': {
+                required: true,
+//		minlength:3
+		},
+		'phone': {
+		required:true,
+		number:true,
+		},
+		'email': {
+                required: true,
+                email: true
+                 },
+                'mess': {
+                required: true,
+		},
+           },
+        messages: {
+                'name': {
+		required :"Please Enter Your Name",
+		},
+		'phone':{
+		required: "Please Enter Your Phone Number",
+		number: "Please Enter Valid Phone Number"
+		},
+                'email': "Please Enter a Valid Email Address",
+                 'mess': {
+		required :"Please Enter Your Message",
+		},
+            },
+               
+    });
+});
+
+</script>
+<?php
+    Modal::begin([
+        'header' =>'<h4>Book An Appointment</h4>',
+        'id' => 'modal',
+        'size' =>'modal-lg',
+        
+    ]);
+    echo "<div id='modalContent'></div>";
+    Modal::end();
+    ?>
+
 </body>
 </html>
 <?php $this->endPage() ?>
