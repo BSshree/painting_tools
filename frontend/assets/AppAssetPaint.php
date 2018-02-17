@@ -29,7 +29,7 @@ class AppAssetPaint extends AssetBundle {
         'http://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js',
         'js/popper.min.js',
         'js/bootstrap.min.js',
-       // 'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js',
+        'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js',
         'https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.18/jquery.touchSwipe.min.js',
         'js/bootstrap-touch-slider.js',
         'js/owl.carousel.min.js',
