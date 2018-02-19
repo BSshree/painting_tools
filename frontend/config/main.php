@@ -14,15 +14,15 @@ return [
     'bootstrap' => ['log'],
     'controllerNamespace' => 'frontend\controllers',
      'modules' => [
-        'admin' => [
-            'basePath' => '@app/modules/admin',
-            'class' => 'frontend\modules\admin\user',
+         'site' => [
+            'basePath' => '@app/modules/site',
+            'class' => 'frontend\modules\site\user',
         ],
         'gii' => [
             'class' => 'yii\gii\Module',
         ],
     ],
-     'defaultRoute' => '/admin/site/index',
+     'defaultRoute' => '/site/site/index',
     'components' => [
         'request' => [
             'cookieValidationKey' => '[RANDOM KEY HERE]',
@@ -34,8 +34,8 @@ return [
             'identityClass' => 'common\models\User',
             'enableAutoLogin' => true,
             'identityCookie' => ['name' => '_identity-frontend', 'httpOnly' => true],
-             'returnUrl' => array('/admin/default/index'),
-            'loginUrl' => array('/admin/site/login'),
+             'returnUrl' => array('/site/default/index'),
+            'loginUrl' => array('/site/site/login'),
         ],
         'session' => [
             // this is the name of the session cookie used for login on the frontend
@@ -59,19 +59,28 @@ return [
             'showScriptName' => false,
             'enableStrictParsing' => true,
             'rules' => [
-                '/' => 'admin/site/index',
-                'login' => 'admin/site/login',
-                'logout' => 'admin/site/logout',
-                'about' => 'admin/site/about',
-                'signup' => 'admin/site/signup', 
-                 'contact' => 'admin/site/contact',
-                 'request-password-reset' => 'admin/site/request-password-reset',
-                 'reset-password' => 'admin/site/reset-password',
-                 'faq/bookotp' => 'admin/faq/bookotp',
-                 'faq/ajaxbookotp' => 'admin/faq/ajaxbookotp',
+                '/' => 'site/site/index',
+               // 'index' => 'site/site/index',
+//                'login' => 'site/site/login',
+//                'logout' => 'site/site/logout',
+//                'signup' => 'site/site/signup', 
+                 'faq/bookotp' => 'site/faq/bookotp',
+                 'faq/ajaxbookotp' => 'site/faq/ajaxbookotp',
                 
                 
             ],
+
+//                    'rules' => array(
+//            '<alias:contact|about>' => 'site/<alias>',
+//            '<alias:product>/<id:\w+>' => 'site/<alias>',
+//            '<controller:\w+>/<id:\w+>' => '<controller>',
+//            '<controller:\w+>/<action:\w+>/<id:\w+>' => '<controller>/<action>',
+//            '<controller:\w+>/<action:\w+>' => '<controller>/<action>',
+//        ),
+//              '<controller:\w+>/<id:\d+>' => '<controller>/view',
+//                '<controller:\w+>/<action:\w+>/<id:\d+>' => '<controller>/<action>',
+//                '<controller:\w+>/<action:\w+>' => '<controller>/<action>',
+            
         ],
         
     ],
