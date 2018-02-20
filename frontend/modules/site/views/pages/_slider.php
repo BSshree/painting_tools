@@ -7,28 +7,28 @@
     </ol>
     <div class="carousel-inner" role="listbox"> 
       <div class="item active"> 
-        <img src="themes/admin/images/slider1.jpg" alt=""  class="slide-image"/>
+        <img src="themes/site_theme/images/slider1.jpg" alt=""  class="slide-image"/>
         <div class="bs-slider-overlay"></div>
         <div class="container">
           <div class="row"> 
             <div class="slide-text slide_style_left">
-              <h1 data-animation="animated zoomInRight"> <img src="themes/admin/images/slogan.png" alt=""></h1>
+              <h1 data-animation="animated zoomInRight"> <img src="themes/site_theme/images/slogan.png" alt=""></h1>
             </div>
           </div>
         </div>
       </div>
       <div class="item"> 
-        <img src="themes/admin/images/slider1.jpg" alt=""  class="slide-image"/>
+        <img src="themes/site_theme/images/slider1.jpg" alt=""  class="slide-image"/>
         <div class="bs-slider-overlay"></div>
         <div class="slide-text slide_style_left">
-          <h1 data-animation="animated zoomInRight"> <img src="themes/admin/images/slogan.png" alt=""></h1>
+          <h1 data-animation="animated zoomInRight"> <img src="themes/site_theme/images/slogan.png" alt=""></h1>
         </div>
       </div>
       <div class="item"> 
-        <img src="themes/admin/images/slider1.jpg" alt=""  class="slide-image"/>
+        <img src="themes/site_theme/images/slider1.jpg" alt=""  class="slide-image"/>
         <div class="bs-slider-overlay"></div>
         <div class="slide-text slide_style_left">
-          <h1 data-animation="animated zoomInRight"> <img src="themes/admin/images/slogan.png" alt=""></h1>
+          <h1 data-animation="animated zoomInRight"> <img src="themes/site_theme/images/slogan.png" alt=""></h1>
         </div>
       </div>
     </div>

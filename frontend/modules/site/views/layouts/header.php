@@ -7,7 +7,7 @@ use yii\bootstrap\Modal;
   <div class="header-row1">
     <div class="container">
       <div class="row">
-        <div class="col-12 col-sm-12  col-md-4 col-lg-4 col-xl-4 logo"> <img src="themes/admin/images/logo.png"  alt=""></div>
+        <div class="col-12 col-sm-12  col-md-4 col-lg-4 col-xl-4 logo"> <img src="themes/site_theme/images/logo.png"  alt=""></div>
         <div class="col-12 col-sm-12 col-md-8 col-lg-7 col-xl-6 header-right offset-xl-2 offset-lg-1">
           <div class="top-btn-cont"><i class="fas fa-pencil-alt fa-flip-horizontal"></i> 
             <?= Html::button('Book An Appointment', ['value'=>Url::to('faq/bookotp'),'class' => 'btn contact-btn1','id' =>'modalButton']) ?>
@@ -23,7 +23,7 @@ use yii\bootstrap\Modal;
         <div id="head-mobile"> Menu</div>
         <div class="button"></div>
         <ul class="main-menu">
-          <li class="active"><a href="index.html" title="Home">Home</a> </li>
+          <li class="active"><a href="/" title="Home">Home</a> </li>
           <li><a href="#">What We do </i></a>
             <ul>
               <li> <a href="#">Services 1</a> </li>

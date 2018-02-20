@@ -4,7 +4,7 @@
       <div class="row">
         <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3 footer-part1">
           <h6> About us</h6>
-          <p> <img src="themes/admin/images/footer-logo.png"  alt=""></p>
+          <p> <img src="themes/site_theme/images/footer-logo.png"  alt=""></p>
           <p> Lorem ipsum dolor sit amet, 
             consectetur adipiscing elit. Fusce luctus maximus rutrum. Vestibulum ligula erat, mattis eget</p>
           <p><a href="#" class="btn btn1"> Read More </a> </p>
@@ -42,7 +42,7 @@
               <p> <i class="fas fa-phone fa-flip-horizontal"></i> (364) 106-7572 </p>
               <p> <i class="fas fa-envelope"></i> <a href="mailto:support@walldressup.com">support@walldressup.com</a> </p>
               <p class="social-links"> <a href="#" target="_blank"><i class="fab fa-facebook-square"></i></a> <a href="#" target="_blank"><i class="fab fa-twitter-square"></i></a> <a href="#" target="_blank"><i class="fab fa-google-plus-square"></i></a> <a href="#" target="_blank"> <i class="fab fa-youtube-square"></i> </a> </p>
-              <p> <a href="https://www.houzz.in/pro/walldressup/walldressupcom"> <img src="themes/admin/images/houzz.jpg"  alt=""> </a></p>
+              <p> <a href="https://www.houzz.in/pro/walldressup/walldressupcom"> <img src="themes/site_theme/images/houzz.jpg"  alt=""> </a></p>
             </div>
           </div>
         </div>
