@@ -10,7 +10,7 @@ use yii\web\AssetBundle;
 class AppAssetPaint extends AssetBundle {
 
     public $basePath = '@webroot';
-    public $baseUrl = '@web/themes/admin';
+    public $baseUrl = '@web/themes/site_theme';
     public $css = [
        // 'https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css',
         'css/bootstrap.min.css',
