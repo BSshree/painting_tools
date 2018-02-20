@@ -86,6 +86,125 @@ header {
 .heading2 {
 	margin-top: 50px;
 }
+#testimonials-carousel-inner .item {
+	padding:25px;
+}
+.pricing-deatils-color1 span {
+	font-size: 34px;
+}
+.pricing-deatils-color1 strong {
+	font-size: 50px;
+	line-height: 50px;
+}
+.pricing-deatils1 ul li {
+	font-size: 22px;
+	padding: 15px 0px;
+	line-height: 24px;
+}
+.book-btn {
+	font-size: 34px;
+}
+.sub-heading1 h2 {
+	font-size: 34px;
+}
+
+
+
+
+.inner-tab-cont ul li a {
+	padding: 0px 35px;
+}
+
+.gp-txt1 {
+	padding: 40px 15px 0px 15px;
+	font-size: 22px;
+}
+
+.gp-txt1 h2 {
+	font-size: 25px;
+	line-height: 28px;
+
+}
+
+.general-painting-service1
+{
+	margin-bottom:30px;
+}
+
+.inner-page-heading h1 {
+	font-size: 28px;
+}
+
+.inner-page-heading {
+	padding: 25px 0px;
+}
+
+
+.general-painting1 {
+	padding: 30px 0px;
+}
+
+.inner-tab-cont {
+	height:auto;
+	margin-bottom: 40px;
+}
+
+.inner-tab-cont ul li a {
+	font-size: 20px;
+	padding: 5px 20px;
+}
+
+
+.inner-tab-cont span
+{
+	display:none;
+}
+
+
+.inner-tab-cont ul li {
+	list-style: none;
+	display: inline-block;
+	text-align: center;
+	padding: 0px 10px 8px 10px;
+}
+
+.gp-txt1 {
+	padding: 40px 10px 0px 10px;
+	font-size: 19px;
+	line-height: 22px;
+}
+
+.gp-feature1 {
+	font-size: 16px;
+	line-height: 17px;
+}
+
+.gp-features-cont {
+	width: 100%;
+	float: left;
+	background: url(../images/gp-features-bg.jpg) #f0f4f7 -90px bottom no-repeat;
+	padding: 60px 0px;
+}
+
+
+.gp-feature1 img
+{
+	width:100px;
+}
+
+
+
+.pc1
+{
+	display:none;
+}
+
+.pc2
+{
+	display:block;
+}
+
+
 }
 
  /*Small devices (landscape phones, 576px and up)*/
@@ -149,6 +268,88 @@ header {
 .footer-cont {
 	font-size: 16px;
 }
+.pricing-deatils-color1 span {
+	font-size: 34px;
+}
+.pricing-deatils-color1 strong {
+	font-size: 50px;
+	line-height: 50px;
+}
+.pricing-deatils1 ul li {
+	font-size: 22px;
+	padding: 15px 0px;
+	line-height: 24px;
+}
+.book-btn {
+	font-size: 34px;
+}
+.sub-heading1 h2 {
+	font-size: 34px;
+}
+
+
+
+
+
+
+.inner-tab-cont ul li a {
+	padding: 0px 35px;
+}
+
+.gp-txt1 {
+	padding: 40px 15px 0px 15px;
+	font-size: 22px;
+}
+
+.gp-txt1 h2 {
+	font-size: 25px;
+	line-height: 28px;
+
+}
+
+.general-painting-service1
+{
+	margin-bottom:30px;
+}
+
+.inner-page-heading h1 {
+	font-size: 42px;
+}
+
+.general-painting1 {
+	padding: 50px 0px;
+}
+
+.inner-tab-cont {
+	height: 33px;
+	margin-bottom: 40px;
+}
+
+.inner-tab-cont ul li a {
+	font-size: 20px;
+	padding: 2px 20px;
+}
+
+.gp-txt1 {
+	padding: 40px 10px 0px 10px;
+	font-size: 19px;
+	line-height: 22px;
+}
+
+.gp-feature1 {
+	font-size: 23px;
+	line-height: 23px;
+}
+
+.gp-features-cont {
+	width: 100%;
+	float: left;
+	background: url(../images/gp-features-bg.jpg) #f0f4f7 -90px bottom no-repeat;
+	padding: 60px 0px;
+}
+
+
+
 }
 
 /* Medium devices (tablets, 768px and up)*/
@@ -183,6 +384,62 @@ header {
 .slider-cont {
 	margin-top: 115px;
 }
+.pricing-deatils-color1 span {
+	font-size: 34px;
+}
+.pricing-deatils-color1 strong {
+	font-size: 50px;
+	line-height: 50px;
+}
+.pricing-deatils1 ul li {
+	font-size: 18px;
+	padding: 15px 0px;
+	line-height: 20px;
+}
+.book-btn {
+	font-size: 28px;
+}
+.sub-heading1 h2 {
+	font-size: 40px;
+}
+
+.inner-tab-cont ul li a {
+	padding: 0px 35px;
+}
+
+.gp-txt1 {
+	padding: 40px 15px 0px 15px;
+	font-size: 22px;
+}
+
+.gp-txt1 h2 {
+	font-size: 25px;
+	line-height: 28px;
+
+}
+
+.inner-tab-cont ul li a {
+	padding: 0px 25px;
+}
+
+.gp-txt1 {
+	padding: 40px 10px 0px 10px;
+	font-size: 19px;
+	line-height: 22px;
+}
+
+.gp-feature1 {
+	font-size: 23px;
+	line-height: 23px;
+}
+
+.gp-features-cont {
+	width: 100%;
+	float: left;
+	background: url(../images/gp-features-bg.jpg) #f0f4f7 -90px bottom no-repeat;
+	padding: 60px 0px;
+}
+
 }
 
 /*Large devices (desktops, 992px and up)*/
@@ -205,6 +462,27 @@ header {
 .footer-cont {
 	font-size: 17px;
 }
+.pricing-deatils-color1 span {
+	font-size: 47px;
+}
+
+
+
+.inner-tab-cont ul li a {
+	padding: 0px 35px;
+}
+
+.gp-txt1 {
+	padding: 40px 25px 0px 25px;
+	font-size: 22px;
+}
+
+.gp-txt1 h2 {
+	font-size: 32px;
+	line-height: 34px;
+
+}
+
 }
 
 /* Extra large devices (large desktops, 1200px and up)*/

@@ -182,7 +182,7 @@ th {
 }
 label {
 	display:inline-block;
-margin-bottom:.5rem;
+margin-bottom:.5rem
 }
 button {
 	border-radius:0
@@ -4562,7 +4562,7 @@ margin-right:.25rem
 }
 @media (min-width:576px) {
 .modal-dialog {
-	max-width:500px;
+	max-width:750px;
 	margin:1.75rem auto
 }
 .modal-dialog-centered {
@@ -4574,7 +4574,7 @@ min-height:calc(100% - (1.75rem * 2))
 }
 @media (min-width:992px) {
 .modal-lg {
-	max-width:800px
+	max-width:980px
 }
 }
 .tooltip {
@@ -7378,8 +7378,3 @@ body {
 color:#B02509;
 font-weight:bolder
 }
-
-
-
-
-

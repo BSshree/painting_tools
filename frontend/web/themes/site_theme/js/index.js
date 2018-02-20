@@ -1,12 +1,3 @@
-
-
-
-
-
-
-
-
-
 (function($) {
 $.fn.menumaker = function(options) {  
  var cssmenu = $(this), settings = $.extend({
@@ -67,7 +58,7 @@ resizeFix = function() {
 			 
 			   //testimonials slider
 			
-			$('.owl-carousel').owlCarousel({
+			$('#testimonials-carousel').owlCarousel({
     loop:true,
     margin:10,
     nav:false,
@@ -84,7 +75,51 @@ resizeFix = function() {
         }
     }
 })
+
+
+//inner page
+
+$('#inner-gallery-carousel').owlCarousel({
+    loop:true,
+    margin:30,
+    nav:true,
+	autoplay:true,
+	navText : ["<i class='fas fa-chevron-left'></i>","<i class='fas fa-chevron-right'></i>"],
+	dots:false,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:3
+        },
+        1000:{
+            items:3,
+        }
+    }
+})
   
+  
+  
+  $('#testimonials-carousel-inner').owlCarousel({
+    loop:true,
+    margin:30,
+    nav:true,
+	autoplay:true,
+	navText : ["<i class='fas fa-chevron-left'></i>","<i class='fas fa-chevron-right'></i>"],
+	dots:false,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:1
+        },
+        1000:{
+            items:1,
+        }
+    }
+})
   
   $(".accordion_example1").smk_Accordion({
 				showIcon: true, //boolean
@@ -101,6 +136,7 @@ resizeFix = function() {
               .load($(this).attr('value'));
   });
   
+  
 })(jQuery);
 
 (function($){
@@ -108,7 +144,6 @@ $(document).ready(function(){
 $("#cssmenu").menumaker({
    format: "multitoggle"
 });
-
 });
 })(jQuery);
 
