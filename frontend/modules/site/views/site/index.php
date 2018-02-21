@@ -8,11 +8,11 @@ use yii\helpers\Url;
 //$this->title = 'Painting Tool';
 ?>
  
- <?php echo $this->render('@frontend/modules/site/views/pages/_slider'); ?> 
- <?php echo $this->render('@frontend/modules/site/views/pages/_whatwedo'); ?> 
- <?php echo $this->render('@frontend/modules/site/views/pages/_testimonials'); ?> 
- <?php echo $this->render('@frontend/modules/site/views/pages/_latest_projects'); ?> 
- <?php echo $this->render('@frontend/modules/site/views/pages/_faq'); ?> 
+ <?php echo $this->render('@frontend/modules/site/views/partials/_slider'); ?> 
+ <?php echo $this->render('@frontend/modules/site/views/partials/_whatwedo'); ?> 
+ <?php echo $this->render('@frontend/modules/site/views/partials/_testimonials'); ?> 
+ <?php echo $this->render('@frontend/modules/site/views/partials/_latest_projects'); ?> 
+ <?php echo $this->render('@frontend/modules/site/views/partials/_faq'); ?> 
 
 
 

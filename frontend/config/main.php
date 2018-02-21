@@ -67,14 +67,14 @@ return [
                  'faq/bookotp' => 'site/faq/bookotp',
                  'faq/ajaxbookotp' => 'site/faq/ajaxbookotp',
                [
-                    'pattern' => '/_gift_a_wall/<slug:>',
+                    'pattern' => '/gift-a-wall/<slug:>',
                     'route' => '/site/site/pages',
-                    'defaults' => ['slug' =>'_gift_a_wall'],
+                    'defaults' => ['slug' =>'gift-a-wall'],
                    ],
                   [
-                    'pattern' => '/_general_painting/<slug:>',
+                    'pattern' => '/general-painting/<slug:>',
                     'route' => '/site/site/pages',
-                    'defaults' => ['slug' =>'_general_painting'],
+                    'defaults' => ['slug' =>'general-painting'],
                    ], 
                 
             ],
