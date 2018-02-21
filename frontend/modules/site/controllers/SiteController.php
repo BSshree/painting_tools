@@ -75,6 +75,11 @@ class SiteController extends Controller
     {
         return $this->render('index');
     }
+    
+    public function actionPages($slug)
+    {
+        return $this->render('/pages/'.$slug);
+    }
 
     /**
      * Logs in a user.

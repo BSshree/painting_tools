@@ -66,21 +66,20 @@ return [
 //                'signup' => 'site/site/signup', 
                  'faq/bookotp' => 'site/faq/bookotp',
                  'faq/ajaxbookotp' => 'site/faq/ajaxbookotp',
-                
+               [
+                    'pattern' => '/_gift_a_wall/<slug:>',
+                    'route' => '/site/site/pages',
+                    'defaults' => ['slug' =>'_gift_a_wall'],
+                   ],
+                  [
+                    'pattern' => '/_general_painting/<slug:>',
+                    'route' => '/site/site/pages',
+                    'defaults' => ['slug' =>'_general_painting'],
+                   ], 
                 
             ],
 
-//                    'rules' => array(
-//            '<alias:contact|about>' => 'site/<alias>',
-//            '<alias:product>/<id:\w+>' => 'site/<alias>',
-//            '<controller:\w+>/<id:\w+>' => '<controller>',
-//            '<controller:\w+>/<action:\w+>/<id:\w+>' => '<controller>/<action>',
-//            '<controller:\w+>/<action:\w+>' => '<controller>/<action>',
-//        ),
-//              '<controller:\w+>/<id:\d+>' => '<controller>/view',
-//                '<controller:\w+>/<action:\w+>/<id:\d+>' => '<controller>/<action>',
-//                '<controller:\w+>/<action:\w+>' => '<controller>/<action>',
-            
+           
         ],
         
     ],
