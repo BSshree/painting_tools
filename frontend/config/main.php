@@ -27,6 +27,7 @@ return [
         'request' => [
             'cookieValidationKey' => '[RANDOM KEY HERE]',
             'csrfParam' => '_csrf-frontend',
+            'enableCsrfValidation' => false,
              'baseUrl' => $baseUrl,
         ],
         'user' => [
@@ -59,14 +60,15 @@ return [
             'showScriptName' => false,
             'enableStrictParsing' => true,
             'rules' => [
+                
                 '/' => 'site/site/index',
-               // 'index' => 'site/site/index',
-//                'login' => 'site/site/login',
-//                'logout' => 'site/site/logout',
-//                'signup' => 'site/site/signup', 
-                 'faq/bookotp' => 'site/faq/bookotp',
-                 'faq/ajaxbookotp' => 'site/faq/ajaxbookotp',
-               [
+                 'bookotp' => 'site/site/bookotp',
+                 'ajaxbookotp' => 'site/site/ajaxbookotp',
+                 'requestquote' => 'site/site/requestquote',
+                 'mailme' => 'site/site/mailme',
+                 'mailmehome' => 'site/site/mailmehome',
+                
+                   [
                     'pattern' => '/gift-a-wall/<slug:>',
                     'route' => '/site/site/pages',
                     'defaults' => ['slug' =>'gift-a-wall'],
@@ -75,11 +77,35 @@ return [
                     'pattern' => '/general-painting/<slug:>',
                     'route' => '/site/site/pages',
                     'defaults' => ['slug' =>'general-painting'],
-                   ], 
-                
+                   ],
+                 [
+                    'pattern' => '/home-makeover/<slug:>',
+                    'route' => '/site/site/pages',
+                    'defaults' => ['slug' =>'home-makeover'],
+                   ],
+                [
+                    'pattern' => '/royale-play/<slug:>',
+                    'route' => '/site/site/pages',
+                    'defaults' => ['slug' =>'royale-play'],
+                   ],
+                [
+                    'pattern' => '/royale-play-calculator/<slug:>',
+                    'route' => '/site/site/pages',
+                    'defaults' => ['slug' =>'royale-play-calculator'],
+                   ],
+                [
+                    'pattern' => '/home-makeover-calculator/<slug:>',
+                    'route' => '/site/site/pages',
+                    'defaults' => ['slug' =>'home-makeover-calculator'],
+                   ],
+                [
+                    'pattern' => '/general-painting-calculator/<slug:>',
+                    'route' => '/site/site/pages',
+                    'defaults' => ['slug' =>'general-painting-calculator'],
+                   ],
             ],
 
-           
+         
         ],
         
     ],

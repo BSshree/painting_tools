@@ -1,3 +1,12 @@
+<?php
+use yii\bootstrap\Modal;
+use yii\data\ActiveDataProvider;
+use yii\grid\GridView;
+use yii\helpers\Html;
+use yii\helpers\Url;
+use yii\web\View;
+use yii\widgets\ActiveForm;
+?>
 <section class="home-faq-cont">
   <div class="container">
     <div class="row">
@@ -6,6 +15,8 @@
           <div class="contact-form-heading">
             <h5> Request a  quote </h5>
             <span> Fill out the form below and get a free quote today.</span> </div>
+            
+            
             <form  id="formvalidate"  name="myForm" class="formValidate" method="post" action="">
           <div class="form-group">
               <input name="name" type="text" class="form-control" placeholder="Name" >
@@ -20,7 +31,9 @@
             <textarea name="mess" cols="" rows="" class="form-control msg" placeholder="Message"></textarea>
           </div>
           <div class="form-group text-center">
-              <input type="submit" id="submit" name="submit" class="btn contact-btn1 contact-btn2" value="Send Message" >
+           <?php //echo $this->render('@frontend/modules/site/views/site/requestquote'); ?> 
+                <?=  Html::submitButton('Send Message', ['class' => 'btn contact-btn1 contact-btn2']) ?>
+              <!--<input type="submit" id="submit" name="submit" class="btn contact-btn1 contact-btn2" value="Send Message" >-->
           </div>
             </form>
         </div>
@@ -99,3 +112,15 @@
     </div>
   </div>
 </section>
+
+<?php
+$requestquote = Yii::$app->getUrlManager()->createUrl("site/site/ajaxrequestquote");
+//echo '<pre>';print_r($requestquote); exit;   
+$script = <<< JS
+
+  
+        
+   
+JS;
+$this->registerJs($script, View::POS_END);
+?>

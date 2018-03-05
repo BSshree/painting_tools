@@ -65,6 +65,7 @@ use yii\helpers\Url;
               </a>
               <div class="pro-name"> <a href="#"> ROYALE<br/>
                 PLAY </a> </div>
+                 <?= Html::a('Royale PlAY', ['/royale-play'], ['class'=>'pro-name']) ?>
             </div>
           </div>
         </div>
@@ -77,6 +78,7 @@ use yii\helpers\Url;
               </a>
               <div class="pro-name"> <a href="#"> HOME <br/>
                 MAKEOVERS </a> </div>
+                 <?= Html::a('HOME MAKEOVER', ['/home-makeover'], ['class'=>'pro-name']) ?>
             </div>
           </div>
         </div>

@@ -7376,5 +7376,11 @@ body {
 .error
 {
 color:#B02509;
-font-weight:bolder
+/*color:red;*/
+/*font-style:normal;*/
+font-weight:60;
+/*font-family:sans-serif;*/
+}
+#successMessage{
+    color:#4F8A10;
 }

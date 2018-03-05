@@ -1,8 +1,7 @@
 <?php
 use yii\helpers\Html;
-use yii\bootstrap\Modal;
 use yii\helpers\Url;
-/* @var $this yii\web\View */
+use yii\bootstrap\Modal;
 
 $this->title ='Wall Dressup - Gift a wall';
 ?>
@@ -31,9 +30,10 @@ $this->title ='Wall Dressup - Gift a wall';
                                 <small> Term & Condition apply</small> </li>
                         </ul>
                     </div>
-                    <div class="text-center book-btn-cont"> <a href="#" class="book-btn"> Book Now !</a></div>
-<?php //Html::button('Book Now !', ['value' => Url::to('faq/bookotp'), 'class' => 'btn contact-btn1', 'id' => 'modalButton']) ?>
-                </div>
+                    <div class="text-center book-btn-cont">
+                        <!--<a href="#" class="book-btn"> Book Now !</a>-->
+ <?= Html::button('Book Now !', ['value'=>Url::to('/bookotp'),'class' => 'book-btn modalButton']) ?>
+             </div>   </div>
             </div>
             <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-lg-4 col-xl-4">
                 <div class="pricing-deatils1 pricing-deatils2">
@@ -50,7 +50,10 @@ $this->title ='Wall Dressup - Gift a wall';
                                 <small> Term & Condition apply</small> </li>
                         </ul>
                     </div>
-                    <div class="text-center book-btn-cont"> <a href="#" class="book-btn"> Book Now !</a></div>
+                    <div class="text-center book-btn-cont"> 
+                        <!--<a href="#" class="book-btn"> Book Now !</a>-->
+                     <?= Html::button('Book Now !', ['value'=>Url::to('/bookotp'),'class' => 'book-btn modalButton']) ?>
+                    </div>
                 </div>
             </div>
             <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-lg-4 col-xl-4">
@@ -67,11 +70,14 @@ $this->title ='Wall Dressup - Gift a wall';
                                 <small> Term & Condition apply</small> </li>
                         </ul>
                     </div>
-                    <div class="text-center book-btn-cont"> <a href="#" class="book-btn"> Book Now !</a></div>
+                    <div class="text-center book-btn-cont">
+                        <!--<a href="#" class="book-btn"> Book Now !</a>--> 
+                    <?= Html::button('Book Now !', ['value'=>Url::to('/bookotp'),'class' => 'book-btn  modalButton']) ?>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
 <?php echo $this->render('@frontend/modules/site/views/partials/_gift_a_wall_gallery'); ?> 
-<?php echo $this->render('@frontend/modules/site/views/partials/_testimonials_'); ?> 
+<?php echo $this->render('@frontend/modules/site/views/partials/inner_testimonials'); ?> 

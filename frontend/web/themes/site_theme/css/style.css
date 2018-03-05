@@ -1002,7 +1002,7 @@ h1, h2, h3, h4, h5, h6 {
 	width:25px;
 }
 .inner-tab-cont ul li a {
-	padding:0px 50px;
+	padding:2px 50px;
 	font-size:16px;
 	background:#333333;
 	font-size:28px;
@@ -1032,8 +1032,16 @@ h1, h2, h3, h4, h5, h6 {
 	font-size:22px;
 	line-height:32px;
 }
+.gp-txt2 {
+	width:100%;
+	float:left;
+	text-align:left;
+	padding:40px 35px 0px 35px;
+	font-size:20px;
+	line-height:32px;
+}
 .gp-txt1 h2 {
-	font-size:40px;
+	font-size:34px;
 	font-family: 'Poppins', sans-serif;
 	text-transform:uppercase;
 	font-weight:500;
@@ -1125,102 +1133,293 @@ h1, h2, h3, h4, h5, h6 {
 	font-size:16px;
 	font-weight:300;
 }
-
-.gp-pricing-tab .nav-pills
-{
+.gp-pricing-tab .nav-pills {
 	text-align:center
 }
-
-
-.gp-pricing-tab .nav-pills li
-{
+.gp-pricing-tab .nav-pills li {
 	text-align:center;
 }
-
-.gp-pricing-tab .nav-pills li a 
-{
+.gp-pricing-tab .nav-pills li a {
 	font-size:22px;
 	color:#333333;
 	text-align:center;
 }
-
 .gp-pricing-tab .nav-pills .nav-link.active, .gp-pricing-tab .nav-pills .show > .nav-link {
 	color: #fff;
 	background-color: #68b716;
 }
-
-.pricing-calculator-btn
-{
+.pricing-calculator-btn {
 	width:auto;
 	position:fixed;
 	top:200px;
 	right:0px;
 }
-
-.pc2
-{
+.pc2 {
 	display:none;
 }
-
-.pricingcalc1 .modal-header
-{
+.pricingcalc1 .modal-header {
 	background:#0594d2;
 	color:#ffffff;
 	font-size:40px;
 	font-family: 'Poppins', sans-serif;
 }
-
-.pricingcalc1 .modal-header h5
-{
+.pricingcalcroyalplay {
+	background:#0594d2;
+	color:#ffffff;
+	font-size:40px;
+	font-family: 'Poppins', sans-serif;
+}
+.pricingcalc1 .modal-header h5 {
 	font-size:32px;
 }
-
-
-
-.pricingcalc1 #accordion h5 .btn
-{
+.pricingcalc1 #accordion h5 .btn {
 	color:#222222;
 	font-size:28px;
 	padding:0px;
 }
-
-.pricingcalc1 #accordion .custom-control {
+.pricingcalc1 #accordion .custom-radio {
 	width: 19px;
 	margin: 0px auto;
 }
-
-.pricingcalc1 #accordion .card
-{
+.pricingcalc1 #accordion .card {
 	margin-bottom:20px;
 }
-
-.total1
-{
+.total1 {
 	font-size:28px;
 	font-weight:600;
 }
-
-.total1 span
-{
+.total1 span {
 	font-size:30px;
 }
-
-
 .pricingcalc1 #accordion .card-header {
 	padding: .15rem 1.25rem;
 	margin-bottom: 0;
 	background-color: rgba(0,0,0,.03);
 	border-bottom: 1px solid rgba(0,0,0,.125);
 }
-
-
-.pricingcalc1 label
-{
+.pricingcalc1 > label {
 	font-weight:600;
 	padding-top:7px;
 }
-
 .btn2 {
 	background:#0594d2;
 	color:#ffffff;
+}
+.partners-page-cont {
+}
+
+
+.royal-play-cont
+{
+	width:100%;
+	float:left;
+	padding:60px 0px
+}
+
+.royalplay-thumb
+{
+	margin-top:30px;
+}
+
+.royalplay-thumb .gp-txt1 h2 {
+	font-size: 25px;
+	line-height: 26px;
+}
+
+.royalplay-thumb .gp-txt1 {
+	width: 100%;
+	float: left;
+	text-align: center;
+	padding: 35px 35px 15px 35px;
+	font-size: 22px;
+	line-height: 28px;
+}
+
+.royalplay-price {
+	font-size: 30px;
+	font-weight: 600;
+	color: #444444;
+}
+
+.royalplay-price span
+{
+	font-weight:400;
+	font-size:18px;
+	color:#555555;
+}
+
+.royalplay-thumb .general-painting-service1 {
+	-webkit-box-shadow: 7px 7px 8px 0px rgba(0, 0, 0, 0.2);
+	-moz-box-shadow:    7px 7px 8px 0px rgba(0, 0, 0, 0.2);
+	box-shadow:         7px 7px 8px 0px rgba(0, 0, 0, 0.2);
+}
+
+
+.royalplay-gallery-cont {
+	background:url(../images/gallery-bg2.jpg) no-repeat;
+	background-size:cover;
+}
+
+
+.homemake-over
+{
+	width:100%;
+	float:left;
+	padding:60px 0px;
+}
+
+.make-overthumb-cont
+{
+	width:100%;
+	float:left;
+	text-align: center;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	-webkit-box-shadow: 0px 1px 20px 0px rgba(0, 0, 0, 0.4);
+	-moz-box-shadow: 0px 1px 20px 0px rgba(0, 0, 0, 0.4);
+	box-shadow: 0px 1px 20px 0px rgba(0, 0, 0, 0.4);
+	border: none;
+	padding: 0px 0px 0px 0px;
+	background: #ffffff;
+	margin-top: 30px;
+	
+}
+
+
+.make-overt-paln-heading
+{
+	width:100%;
+	float:left;
+	background:#696969;
+	padding:20px 0px;
+	color:#ffffff;
+	font-size:34px;
+	text-align:center;
+	font-family: 'Poppins', sans-serif;
+	border:#ffffff dashed 2px;
+	
+}
+
+
+.make-overthumb-cont2 .make-overt-paln-heading
+{
+	background:#696969;
+}
+
+
+
+
+.make-overthumb-cont2  .make-over-price
+{
+	background:#555555;
+}
+
+
+.make-overthumb-cont3 .make-overt-paln-heading
+{
+	background:#696969;
+}
+
+
+
+
+.make-overthumb-cont3  .make-over-price
+{
+	background:#555555;
+}
+
+
+
+
+
+
+.make-overt-paln-heading p
+{
+	margin-bottom:0px;
+}
+
+
+.make-overt-paln-heading span
+{
+	font-size:75px;
+	font-weight:600;
+}
+
+
+.make-over-price
+{
+	width:100%;
+	float:left;
+	padding-bottom:20px;
+	background:#555555;
+	height:90px;
+	line-height:100px;
+	margin-top:25px;
+	margin-bottom:25px !important;
+	padding-bottom:25px;
+}
+
+.make-over-thumb-img
+{
+	width:100%;
+	float:left;
+	border-bottom:#BDBDBD solid 5px;
+}
+.plan-hold{
+    font-weight:600;
+	font-size:18px;
+}
+
+royalplay-thumb .royalplay-price
+{
+	width:100%;
+	float:left;
+}
+
+.metalic
+{
+	width:50%;
+	float:left;
+	padding:0px 10px;
+	border:none;
+	line-height:22px;
+
+}
+
+.n-metalic
+{
+	width:50%;
+	float:left;
+	padding:0px 10px;
+	border-right:#dddddd solid 1px;
+}
+
+
+
+
+.royale-play-mn .gp-txt1 {
+	padding: 15px 10px 25px 10px;
+}
+
+.royale-play-mn .badge
+{
+	margin-bottom:10px;
+	width:100%;
+	font-size:16px;
+	color:#ffffff;
+}
+
+.required-field{ 
+    color: red;
+}
+#successMessage{
+    color:#4F8A10;
+}
+
+.show-row:first-child .remove_row{
+    display: none;
+}
+.show-row .remove_row{
+    text-align: center; cursor: pointer;
 }
