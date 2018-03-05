@@ -5,18 +5,17 @@ use yii\bootstrap\Modal;
 use yii\helpers\Url;
 /* @var $this yii\web\View */
 
-//$this->title = 'Painting Tool';
+$this->title = 'Wall Dressup';
 ?>
  
  <?php echo $this->render('@frontend/modules/site/views/partials/_slider'); ?> 
  <?php echo $this->render('@frontend/modules/site/views/partials/_whatwedo'); ?> 
- <?php echo $this->render('@frontend/modules/site/views/partials/_testimonials'); ?> 
+ <?php echo $this->render('@frontend/modules/site/views/partials/home_testimonials'); ?> 
  <?php echo $this->render('@frontend/modules/site/views/partials/_latest_projects'); ?> 
- <?php echo $this->render('@frontend/modules/site/views/partials/_faq'); ?> 
+ <?php echo $this->render('@frontend/modules/site/views/partials/_faq', ['/requestquote' ]); ?> 
 
 
 
-<!-- <p class="pull-right"><?php // Html::button('Book An Appointment', ['value'=>Url::to('faq/bookotp'),'class' => 'btn btn-success','id' =>'modalButton']) ?> </p>-->
  
 
    

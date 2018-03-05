@@ -25,12 +25,12 @@
             <div class="col-6 col-sm-4 col-md-4 col-lg-4 col-xl-4 footer-part1">
               <h6> WHAT WE DO</h6>
               <ul>
-                <li><a href="#">Gift a wall</a></li>
-                <li><a href="#">General Painting</a></li>
+                <li><a href="/gift-a-wall">Gift a wall</a></li>
+                <li><a href="/general-painting">General Painting</a></li>
                 <li><a href="#">Designer Walls</a></li>
                 <li><a href="#">Wallpapers</a></li>
-                <li><a href="#">Royale Play</a></li>
-                <li><a href="#">Home Makeovers</a></li>
+                <li><a href="/royale-play">Royale Play</a></li>
+                <li><a href="/home-makeover">Home Makeovers</a></li>
                 <li><a href="#">Potraits </a></li>
                 <li><a href="#">Statues </a></li>
                 <li><a href="#">Metal Murals</a></li>
