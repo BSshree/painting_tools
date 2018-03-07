@@ -80,7 +80,7 @@ $(document).ready(function() {
     Modal::begin([
         'header' =>'<h4>Book An Appointment</h4>',
         'id' => 'modal',
-        'size' =>'modal-lg',
+        'size' =>'modal-dialog1 modal-lg',
         
     ]);
     echo "<div id='modalContent'></div>";

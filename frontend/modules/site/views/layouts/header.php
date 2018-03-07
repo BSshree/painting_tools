@@ -26,10 +26,10 @@ use yii\bootstrap\Modal;
           <li class="active"><a href="/" title="Home">Home</a> </li>
           <li><a href="#">What We do </i></a>
             <ul>
-              <li> <a href="#">Services 1</a> </li>
-              <li><a href="#"> Services 2 </a> </li>
-              <li> <a href="#">Services 3</a> </li>
-              <li> <a href="#">Services 4 </a> </li>
+              <li> <a href="gift-a-wall">Gift a wall</a> </li>
+              <li><a href="royale-play"> Royale play </a> </li>
+              <li> <a href="home-makeover">Home makeover</a> </li>
+              <li> <a href="general-painting">General painting </a> </li>
             </ul>
           </li>
           <li><a href="#"> Testimonials </a> </li>
