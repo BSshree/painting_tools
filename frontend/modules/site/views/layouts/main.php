@@ -74,68 +74,6 @@ $(document).ready(function() {
                
     });
     });
-//    $(document).ready(function() {
-//     $("#royalplay-validate").validate({
-//        rules: {
-//              'wall-height': {
-//                required: true,
-//                number: true,
-//                },
-//		'wall-width': {
-//		required:true,
-//                number: true,
-//		},
-//		'email': {
-//                required: true,
-//                email: true,
-//                 },
-//                'name': {
-//                required: true,
-//		},
-//                'royal-design':{
-//                    required:true,
-//                },
-//                'radio':{
-//                    required: true,
-//                }
-//           },
-//        messages: {
-//                'name': {
-//		required :"Please Enter Your Name",
-//		},
-//		'wall-height':{
-//		required: "Please Enter Height",
-//		number: "Please Enter Valid Height"
-//		},
-//                'wall-width':{
-//		required: "Please Enter Width",
-//		number: "Please Enter Valid Width"
-//		},
-//                'email': "Please Enter Valid Email Address",
-//                 'royal-design': {
-//		required :"Please Select Design",
-//		},
-//                'radio':{
-//                    required:"Please Select Option"
-//                }
-//               
-//            },
-//             
-//                errorPlacement: function(error, element) 
-//        {
-//            if ( element.is(":radio") ) 
-//            {
-//                error.appendTo( element.parents('.container') );
-//            }
-//            else 
-//            { // This is the default behavior 
-//                error.insertAfter( element );
-//            }
-//         }
-//         
-//    });
-//    
-//});
 
 </script>
 <?php
