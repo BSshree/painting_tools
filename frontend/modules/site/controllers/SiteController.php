@@ -25,7 +25,7 @@ class SiteController extends Controller
                 'only' => ['logout', 'signup'],
                 'rules' => [
                    [
-                    'actions' => ['login','error','changepassword','pages', 'bookotp', 'ajaxbookotp','mailme','mailmehome','calculators'],
+                    'actions' => ['login','error','changepassword','pages', 'bookotp', 'ajaxbookotp','mailme','mailmehome','mailmegeneral','calculators'],
                     'allow' => true,
                     ],
 //                    [
@@ -154,14 +154,15 @@ class SiteController extends Controller
     {
         $model = new Sms();
         if (Yii::$app->request->isAjax) {
-            $data = Yii::$app->request->post();    
+            $data = Yii::$app->request->post();  
+          //  print_r($data); exit;
             $room_name= array();
             $plan_name= array();
             $others = array();
             foreach($data['data'] as $value){
-                 if($value['name'] == 'room-name' || $value['name'] == 'room-name[0]'){
-                     $room_name[] = $value['value'];
-                 }else if($value['name'] == 'plan-name' || $value['name'] == 'plan-name[0]'){
+                 if(strpos($value['name'], 'room-name') !== false ){
+                       $room_name[] = $value['value'];
+                 }else if(strpos($value['name'], 'plan-name') !== false ){
                      $plan_name[] = $value['value'];
                  }else{
                      $others[$value['name']] = $value['value'];
@@ -171,11 +172,9 @@ class SiteController extends Controller
             $price = ["Hatchling Plan" => "3000", "Baby Plan" => "6000", "Transformation Plan"=>"10000"];
 
             $mail_body = '';
-            //echo '<tr>';
             for($i = "0"; $i < count($room_name); $i++){
                 $mail_body .= "<th>Room Name: </th><td>".$room_name[$i]."</td> <th> Plan Name: </th><td> ".$plan_name[$i]." </td><th> Rate: </th><td> ".$price[$plan_name[$i]]." </td>";
             }
-            //echo '</tr>';
              //print_r($others); exit;
 //             print_r($others['name']); exit;
             //echo $mail_body; exit;
@@ -242,8 +241,27 @@ class SiteController extends Controller
     }
     
     
+    public function actionMailmegeneral(){
+     
+        if (Yii::$app->request->isAjax) {
+            echo 'test'; exit;
+            $data = Yii::$app->request->post();  
+            
+            
+            
+      }
+        
+        
+        
+        
+        
+        return $this->renderAjax('/pages/general-painting-calculator', [
+                    'model' => $model,
+        ]);
+    }
     
 
+    
   public function actionAjaxbookotp() {
         if (Yii::$app->request->isAjax) {
             $session = Yii::$app->session;

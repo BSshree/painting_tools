@@ -4,6 +4,10 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use yii\web\View;
 use yii\widgets\DetailView;
+use yii\helpers\Url;
+use yii\bootstrap\Modal;
+
+$this->title = 'Wall Dressup - Home-makeover-Calculator';
 ?>
 <section class="slider-cont inner-page-heading">
     <div class="container">
@@ -75,7 +79,9 @@ use yii\widgets\DetailView;
                                     <input type="hidden" name="total-price" id="total-price" value="0">
                                     <input type="submit" name="submit" class="btn btn1" id="final-mailme-id" value="Send"><div style="display:none" class="loading-image"><img src="themes/site_theme/images/ajax-loader.gif" alt=""></div>
                                     <br><br>
-                                    <div class="form-group ">
+                                   
+                                </div>
+                                 <div class="form-group ">
                                         <div class="row mb-4">
                                             <div class="col-3">
                                                 <div id="successMessage"> </div>
@@ -83,8 +89,6 @@ use yii\widgets\DetailView;
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                
                         
                                 
                                 <div class="form-group"> 
@@ -92,7 +96,7 @@ use yii\widgets\DetailView;
                                 </div>
                             </div>
                             <div class="modal-footer text-center">
-                                <button type="button" class="btn btn2">Book An Appointment</button>
+                                <?= Html::button('Book An Appointment', ['value' => Url::to('/bookotp'), 'class' => 'btn btn2  modalButton']) ?>
                                 <button type="button" class="btn btn1" id="mailme-id">Mail me</button>
                             </div>
                         </div>
@@ -151,7 +155,7 @@ $script = <<< JS
             $('select[name="plan-name['+counter+']"]').rules("add", {
                 required: true
             });
-            counter += 1;
+            counter += 1; 
         });
         
         function home_amount(){
@@ -203,9 +207,9 @@ $script = <<< JS
                     'name': {
                     required :"Please Enter Your Name",
                     },
-//                    'room-name[0]':{
-//                    required: "Please Enter Room Name",
-//                    },
+                    'room-name[0]':{
+                    required: "Please Enter Room Name",
+                    },
                     'email': "Please Enter Valid Email Address",
 
                 },

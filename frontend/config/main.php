@@ -67,6 +67,7 @@ return [
                  'requestquote' => 'site/site/requestquote',
                  'mailme' => 'site/site/mailme',
                  'mailmehome' => 'site/site/mailmehome',
+                 'mailmegeneral' => 'site/site/mailmegeneral',
                 
                    [
                     'pattern' => '/gift-a-wall/<slug:>',

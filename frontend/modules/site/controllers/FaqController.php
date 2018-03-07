@@ -54,15 +54,7 @@ class FaqController extends Controller {
         ]);
     }
 
-    public function actionBookapp() {
-        $searchModel = new FaqSearch();
-        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
-
-        return $this->render('bookapp', [
-                    'searchModel' => $searchModel,
-                    'dataProvider' => $dataProvider,
-        ]);
-    }
+   
 
     public function actionAjaxbookotp() {
         if (Yii::$app->request->isAjax) {
