@@ -9,7 +9,6 @@ use yii\web\View;
 use yii\widgets\ActiveForm;
 ?>
 
-
 <div class="stepwizard">
     <div class="progress center-block">
         <div class="progress-bar progress-bar-success active" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 13%">
@@ -113,9 +112,13 @@ use yii\widgets\ActiveForm;
                         'Potraits/Metal murals/Statues' => 'Potraits/Metal murals/Statues',
                     );
          
-        echo $form->field($model, 'type_service')->textInput(['class' => 'form-control','required'=>true])->dropDownList($services)->label('Service');
-
-        echo $form->field($model, 'mess')->textInput(['class' => 'form-control','maxlength' => true,'placeholder'=>'Enter Your Message'])->label('Message');
+        echo $form->field($model, 'type_service')->textInput(['class' => 'form-control item-hide-load','required'=>true])->dropDownList($services)->label('Service'); ?>
+ <div style="display:none" class="form-group show-item-hidden">
+     <label class="control-label">Service</label>
+    <input id="item" type="text"  class="form-control item-default-load" />
+    <!--<input id="item" type="text"  class="form-control" />-->
+       </div>
+      <?php  echo $form->field($model, 'mess')->textInput(['class' => 'form-control','maxlength' => true,'placeholder'=>'Enter Your Message'])->label('Message');
 
         ?>
        
@@ -278,6 +281,27 @@ $script = <<< JS
 }).on('submit', function(e){
     e.preventDefault();
 });   
+    //____
+                
+                
+        var url = $(location).attr("href"),
+            parts = url.split("/"),
+            last_part = parts[parts.length-1];
+           // alert(last_part);
+         var res_str = last_part.replace(/-/g, ' ');    
+               // alert(res_str);
+                
+         //alert(res_str.ucfirst());
+         //var cap = ucfirst(res_str);     
+           //     alert(cap);
+                
+//         if(res_str = 'royale play calculator'){
+//            alert('royal');
+//                $('.field-sms-type_service').hide();
+//                $('.show-item-hidden').show();
+//                $('.item-default-load').val('royal-play');
+//                
+//           }
                 
     
 }); 

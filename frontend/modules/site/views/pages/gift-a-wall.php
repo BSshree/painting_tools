@@ -32,7 +32,7 @@ $this->title ='Wall Dressup - Gift a wall';
                     </div>
                     <div class="text-center book-btn-cont">
                         <!--<a href="#" class="book-btn"> Book Now !</a>-->
- <?= Html::button('Book Now !', ['value'=>Url::to('/bookotp'),'class' => 'book-btn modalButton']) ?>
+            <?= Html::button('Book Now !', ['value'=>Url::to('/bookotp'),'class' => 'book-btn  modalButton']) ?>
              </div>   </div>
             </div>
             <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-lg-4 col-xl-4">

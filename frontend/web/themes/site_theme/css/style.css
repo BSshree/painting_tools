@@ -924,7 +924,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1dc8cd', end
 .book-btn {
 	background:#444444;
 	font-size:40px;
-	padding:0px 20px;
+	padding:10px 20px;
 	color:#ffffff;
 }
 .book-btn:hover {

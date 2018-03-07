@@ -1,3 +1,4 @@
+
 (function($) {
 $.fn.menumaker = function(options) {  
  var cssmenu = $(this), settings = $.extend({
@@ -130,11 +131,25 @@ $('#inner-gallery-carousel').owlCarousel({
   
   
   
+  
+  
   $('.modalButton').click(function(){
       $('#modal').modal('show')
               .find('#modalContent')
               .load($(this).attr('value'));
   });
+  
+  
+  
+  $(document).on('click', '.inner-tab-cont a[href^="#"]', function (event) {
+    event.preventDefault();
+
+    $('html, body').animate({
+        scrollTop: $($.attr(this, 'href')).offset().top - 150
+    }, 500);
+});
+
+  
   
   
   
