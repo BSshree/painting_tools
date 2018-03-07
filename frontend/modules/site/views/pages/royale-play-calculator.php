@@ -372,7 +372,7 @@ $script = <<< JS
                 
                 
                 $('#mailme-id').click(function() {
-                $("#mailme-show").show(); 
+                $("#mailme-show").toggle('show'); 
         
                 });
         
