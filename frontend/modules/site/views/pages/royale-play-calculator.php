@@ -134,7 +134,7 @@ $this->title = 'Wall Dressup - Royale Play-Calculator';
                                     </div>
                                 </div>
                             </div>
-                            <div class="" id="mailme-show" style="display:none">
+                            <div class="" id="mailme-show-royal" style="display:none">
                                 <div class="form-group ">
                                     <div class="row mb-4">
                                         <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
@@ -156,7 +156,7 @@ $this->title = 'Wall Dressup - Royale Play-Calculator';
                                 <div class="form-group ">
                                     <div class="row mb-4">
                                         <div class="col-3">
-                                            <input type="submit" name="submit" class="button btn btn1" id="final-mailme-id" value="Send">
+                                            <input type="submit" name="submit" class="button btn btn1" id="final-mailme-home" value="Send">
                                         </div>
                                     </div>
                                 </div>
@@ -177,11 +177,8 @@ $this->title = 'Wall Dressup - Royale Play-Calculator';
                                     </div>
                                 </div></div>
                             <div class="modal-footer text-center">
-                                <?php //Html::button('Book An Appointment', ['value' => Url::to('/bookotp'), 'class' => 'btn btn2  modalButton']) ?>
-                                <?php // Html::button('Mail me', ['value'=>Url::to('/mailme'),'class' => 'btn btn1  modalButton']) ?>
                                  <button type="button" class="btn btn2"data-toggle="modal" data-target="#Bookanotp">Book An Appointment</button>
-
-                                <button type="button" class="btn btn1" id="mailme-id">Mail me</button>
+                                 <button type="button" class="btn btn1" id="mailme-royal">Mail me</button>
                             </div>
                         </form>
                     </div>
@@ -266,7 +263,10 @@ $script = <<< JS
         
        //____
         
+            $('#mailme-royal').click(function() {
+            $("#mailme-show-royal").toggle('slow');
         
+        });
          
                    
 
@@ -312,7 +312,7 @@ $script = <<< JS
 		},
                 'radio':{
                     required:"Please Select Option"
-                }
+                },
                
             },
              
@@ -371,10 +371,7 @@ $script = <<< JS
             //_______    
                 
                 
-                $('#mailme-id').click(function() {
-                $("#mailme-show").toggle('show'); 
-        
-                });
+            
         
             });
 

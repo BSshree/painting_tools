@@ -39,41 +39,41 @@ AppAssetPaint::register($this);
 <?php $this->endBody() ?>
    
 <script>
-$(document).ready(function() {
-    $("#formvalidate").validate({
-        rules: {
-              'name': {
-                required: true,
-//		minlength:3
-		},
-		'phone': {
-		required:true,
-		number:true,
-		},
-		'email': {
-                required: true,
-                email: true
-                 },
-                'mess': {
-                required: true,
-		},
-           },
-        messages: {
-                'name': {
-		required :"Please Enter Your Name",
-		},
-		'phone':{
-		required: "Please Enter Your Phone Number",
-		number: "Please Enter Valid Phone Number"
-		},
-                'email': "Please Enter a Valid Email Address",
-                 'mess': {
-		required :"Please Enter Your Message",
-		},
-            },
-               
-    });
-    });
+//$(document).ready(function() {
+//    $("#formvalidate").validate({
+//        rules: {
+//              'name': {
+//                required: true,
+////		minlength:3
+//		},
+//		'phone': {
+//		required:true,
+//		number:true,
+//		},
+//		'email': {
+//                required: true,
+//                email: true
+//                 },
+//                'mess': {
+//                required: true,
+//		},
+//           },
+//        messages: {
+//                'name': {
+//		required :"Please Enter Your Name",
+//		},
+//		'phone':{
+//		required: "Please Enter Your Phone Number",
+//		number: "Please Enter Valid Phone Number"
+//		},
+//                'email': "Please Enter a Valid Email Address",
+//                 'mess': {
+//		required :"Please Enter Your Message",
+//		},
+//            },
+//               
+//    });
+//    });
 
 </script>
 <?php

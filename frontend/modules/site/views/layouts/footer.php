@@ -136,15 +136,34 @@ $script = <<< JS
             curInputs = curStep.find("input[type='text'],input[type='url']");
                 
         var otp_no = $("#otp_no").val();
-         $(".show-item-hidden").show(); 
-         $("#sms-type_service").hide(); 
-                 var url = $(location).attr("href"),
+        
+        $(".show-item-hidden").show(); 
+        $(".item-default-load").hide();
+        var url = $(location).attr("href"),
             parts = url.split("/"),
             last_part = parts[parts.length-1];
-            alert(last_part);
-         var res_str = last_part.replace(/-/g, ' ');    
-                alert(res_str);
-                $('.item-default-load').val(res_str);
+        //var names = ['General painting', 'gift-a-wall', 'concept-walls', 'designer-walls', 'wall-paper', 'royale-play', 'home-makeover', 'Potraits/Metal murals/Statues'];
+       
+        if(last_part ){
+        if( last_part=='royale-play-calculator'){
+        last_part ="Royale play";
+            }
+        if( last_part=='home-makeover-calculator'){
+        last_part ="Home makeover";
+            }
+        //alert(last_part);
+        var cap = last_part.charAt(0).toUpperCase() +last_part.slice(1);
+        //alert(cap);
+        var res_str = cap.replace(/-/g, ' ');    
+              //  alert(res_str);
+            $("#sms-type_service").val(res_str);
+        }
+//        if (jQuery.inArray(name, names)!='-1') {
+//            alert(name + ' is in the array!');
+//        } else {
+//            alert(name + ' is NOT in the array...');
+//        }
+        
         $.ajax({
                 url  : '{$sendotp}',
                 type : 'POST',                   
@@ -209,7 +228,7 @@ $script = <<< JS
                 
     var form = $(this);
     var formData = form.serialize();
-    $(".loading-image").show();   
+    $(".loading-image1").show();   
    
     $.ajax({
         url: form.attr("action"),
@@ -219,7 +238,7 @@ $script = <<< JS
             if(data == 'success'){
                  navListItems.eq(2).attr('disabled','');
                 nextStepWizard.removeAttr('disabled').trigger('click'); 
-                 $(".loading-image").hide(); 
+                 $(".loading-image1").hide(); 
             }
         },
         error: function () {
@@ -231,7 +250,7 @@ $script = <<< JS
 });   
     //____
                 
- 
+    
     
                 
                 

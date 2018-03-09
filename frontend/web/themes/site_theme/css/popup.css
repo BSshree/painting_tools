@@ -28,6 +28,8 @@
     display: table-cell;
     text-align: center;
     position: relative;
+        padding-left: 11px;
+        width: 22%;
 }
 .btn-circle {
     width: 25px;

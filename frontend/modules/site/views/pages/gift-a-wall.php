@@ -31,7 +31,7 @@ $this->title ='Wall Dressup - Gift a wall';
                         </ul>
                     </div>
                     <div class="text-center book-btn-cont">
-                        <a href="#" class="book-btn" data-toggle="modal" data-target="#Bookanotp"> Book Now !</a>
+                        <a href="#" class="book-btn" data-toggle="modal" data-target="#Bookanotp" id="book1"> Book Now !</a>
             <?php //Html::button('Book Now !', ['value'=>Url::to('/bookotp'),'class' => 'book-btn  modalButton']) ?>
              </div>   </div>
             </div>
@@ -51,7 +51,7 @@ $this->title ='Wall Dressup - Gift a wall';
                         </ul>
                     </div>
                     <div class="text-center book-btn-cont"> 
-                      <a href="#" class="book-btn" data-toggle="modal" data-target="#Bookanotp"> Book Now !</a>
+                      <a href="#" class="book-btn" data-toggle="modal" data-target="#Bookanotp" id="book2"> Book Now !</a>
                         <!--<a href="#" class="book-btn"> Book Now !</a>-->
                      <?php // Html::button('Book Now !', ['value'=>Url::to('/bookotp'),'class' => 'book-btn modalButton']) ?>
                     </div>
@@ -72,7 +72,7 @@ $this->title ='Wall Dressup - Gift a wall';
                         </ul>
                     </div>
                     <div class="text-center book-btn-cont">
-                    <a href="#" class="book-btn" data-toggle="modal" data-target="#Bookanotp"> Book Now !</a>
+                    <a href="#" class="book-btn" data-toggle="modal" data-target="#Bookanotp" id="book3"> Book Now !</a>
                     <?php // Html::button('Book Now !', ['value'=>Url::to('/bookotp'),'class' => 'book-btn  modalButton']) ?>
                     </div>
                 </div>
