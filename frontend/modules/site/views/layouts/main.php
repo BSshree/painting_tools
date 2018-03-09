@@ -77,14 +77,14 @@ $(document).ready(function() {
 
 </script>
 <?php
-    Modal::begin([
-      //  'header' =>'<h4>Book An Appointment</h4>',
-        'id' => 'modal',
-        'size' =>'modal-dialog',
-        
-    ]);
-    echo "<div id='modalContent'></div>";
-    Modal::end();
+//    Modal::begin([
+//        'header' =>'<h4>Book An Appointment</h4>',
+//        'id' => 'modal',
+//        'size' =>'modal-dialog',
+//        
+//    ]);
+//    echo "<div id='modalContent'></div>";
+//    Modal::end();
     ?>
 
 

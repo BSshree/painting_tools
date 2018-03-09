@@ -62,9 +62,11 @@ $this->title = 'Wall Dressup - General-painting-Calculator';
                                                                 </thead>
                                                                 <tbody class="tbody1">
                                                                     <tr class="show-row"><td></td>
-                                                                        <th scope="row" align="center"><div class="custom-control custom-radio">
-                                                                                <input type="radio" name="customRadio" class="rad1" >
-                                                                                <!--<input type="radio" id="customradio1" name="customRadio" class="custom-control-input interior-fresh-paint customRadio1 rad1" >-->
+                                                                        <td scope="row" align="center"><div class="custom-control custom-radio">
+<!--                                                                                <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
+                                                                                <label class="custom-control-label" for="customRadio1"></label>-->
+                                                                                <input type="radio" name="radio1[0]" class="rad-paint" value="fresh" data-val="0">
+
                                                                                 <label class="custom-control-label" for="customRadio1" ></label>
                                                                             </div></th>
                                                                         <td><div class="custom-control custom-radio">
@@ -110,7 +112,7 @@ $this->title = 'Wall Dressup - General-painting-Calculator';
                                             <div class="card">
                                                 <div class="card-header" id="headingTwo">
                                                     <h5 class="mb-0">
-                                                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"> Exterior </button>
+                                                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo"> Exterior </button>
                                                     </h5>
                                                 </div>
                                                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
@@ -131,11 +133,11 @@ $this->title = 'Wall Dressup - General-painting-Calculator';
                                                                 </thead>
                                                                 <tbody class="tbody2">
                                                                     <tr class="show-row2"><td></td>
-                                                                        <th scope="row" align="center"> <div class="custom-control custom-radio">
+                                                                        <td scope="row" align="center"> <div class="custom-control custom-radio">
                                                                                 <!--<input type="radio"  name="customRadio" class="custom-control-input rad3">-->
                                                                                 <input type="radio"  name="customRadio" class="rad3">
                                                                                 <label class="custom-control-label" for="customRadio3"></label>
-                                                                            </div></th>
+                                                                            </div></td>
                                                                         <td><div class="custom-control custom-radio">
                                                                                 <!--<input type="radio"  name="customRadio" class="custom-control-input rad4">-->
                                                                                 <input type="radio"  name="customRadio" class="rad4">
@@ -249,8 +251,8 @@ $this->title = 'Wall Dressup - General-painting-Calculator';
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 text-right total1">
-                                            Total :  <span class="badge badge-secondary home-total"></span>
+                                        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 text-right">
+                                           <b>Total : </b><span class="badge badge-secondary home-total total1">  </span>
                                         </div>
                                     </div>
                                 </div>
@@ -269,39 +271,20 @@ $this->title = 'Wall Dressup - General-painting-Calculator';
     <script type="text/html" id="form_tpl">
         <tr class="show-row">
             <td><div class="remove_row"><i class="fas fa-times-circle"></i></div></td>
-            <th scope="row" align="center"><div class="custom-control custom-radio">
-                    <input type="radio"  name="radio1[<%= element.i %>]" class="rad1" >
+            <td scope="row" align="center"><div class="custom-control custom-radio">
+                    <input type="radio"  name="radio1[<%= element.i %>]" class="rad-paint" value="fresh" data-val="<%= element.i %>">
                     <label class="custom-control-label" for="customRadio1" ></label>
-                </div></th>
+                </div></td>
             <td><div class="custom-control custom-radio">
-                    <input type="radio"  name="radio1[<%= element.i %>]" class="rad2">
+                    <input type="radio"  name="radio1[<%= element.i %>]" class="rad-paint" value="repaint" data-val="<%= element.i %>" >
                     <label class="custom-control-label" for="customRadio2"></label>
                 </div></td>
             <td><input name="room-name1[<%= element.i %>]" type="text" class="form-control int-room-name"></td>
             <td><input name="appr-sqft1[<%= element.i %>]" type="text" class="form-control int-appr-sqft"></td>
-            <td><select class="custom-select general-select">
-                </select>
-                <select class="custom-select int-fresh-paint" name="selecti1[<%= element.i %>]" style="display:none">
-                    <option selected>Select</option>
-                    <option value="Asian Paints Tractor Emulsion" data-price="21">Asian Paints Tractor Emulsion</option>
-                    <option value="Asian Paints Apcolite Premium Emulsion" data-price="24">Asian Paints Apcolite Premium Emulsion</option>
-                    <option value="Asian Paints Apcolite Advance Matt Emulsion" data-price="26">Asian Paints Apcolite Advance Matt Emulsion</option>
-                    <option value="Asian Paints Royale Luxury Emulsion" data-price="30">Asian Paints Royale Luxury Emulsion</option>
-                    <option value="Asian Paints Royale ATMOS" data-price="32">Asian Paints Royale ATMOS</option>
-                    <option value="Asian Paints Royale ASPIRA" data-price="35">Asian Paints Royale ASPIRA </option>
-                </select>
-                <select class="custom-select" id="int-re-paint" name="selectr1[<%= element.i %>]"  style="display:none">
-                    <option selected>Select</option>
-                    <option value="Asian Paints Tractor Emulsion" data-price="8">Asian Paints Tractor Emulsion</option>
-                    <option value="Asian Paints Apcolite Premium Emulsion" data-price="11">Asian Paints Apcolite Premium Emulsion</option>
-                    <option value="Asian Paints Apcolite Advance Matt Emulsion" data-price="15">Asian Paints Apcolite Advance Matt Emulsion</option>
-                    <option value="Asian Paints Royale Luxury Emulsion" data-price="19">Asian Paints Royale Luxury Emulsion</option>
-                    <option value="Asian Paints Royale ATMOS" data-price="20">Asian Paints Royale ATMOS</option>
-                    <option value="Asian Paints Royale ASPIRA" data-price="22">Asian Paints Royale ASPIRA</option>
-                </select>
+            <td class="paintclass">
             </td>
-            <td class="text-center general-rate"><b><span id="price"></span> </b></td>
-            <td id="general-amount"><b> </b></td>
+            <td class="text-center general-rate"><b><span class="fresh_price"></span> </b></td>
+            <td class="text-center general-amount"><b><span class="general_amount"></span> </b></td>
         </tr>
     </script>
     <script type="text/html" id="form_tpl2">
@@ -360,12 +343,12 @@ jQuery(document).ready(function () {
                 i: counter
             };
             $(".tbody1").hide().append(tpl(tplData)).show('slow');
-            $('input[name="room-name1['+counter+']"]').rules("add", {
-                required: true
-            });
-            $('input[name="appr-sqft1['+counter+']"]').rules("add", {
-                required: true
-            });
+//            $('input[name="room-name1['+counter+']"]').rules("add", {
+//                required: true
+//            });
+//            $('input[name="appr-sqft1['+counter+']"]').rules("add", {
+//                required: true
+//            });
 //            $('input[name="radio1['+counter+']"]').rules("add", {
 //                required: true
 //            });
@@ -378,45 +361,10 @@ jQuery(document).ready(function () {
             counter += 1;
         });
             
-         function general_amount(){
-            var total = '0';
-
-            $('.show-row .int-fresh-paint').find(':selected').each(function() {
-                total = parseInt(total) + parseInt($(this).data('price'));
-            });
-            $("#total-price").val(total);
-            $(".home-total").text(total);
-        }
-        $('body').on('change','.int-fresh-paint',function(){
-            var _planprice = $(this).find(':selected').data('price');            
-            $(this).closest('.show-row').find('.home-rate b').text(_planprice);
-           general_amount(); 
-            
-            
-        });
-            
-       $('body').on('change','.rad1',function(){
-//            $('input:radio').each(function () {
-
-            alert('rad');
-            $(".general-select").append(' <option value="Asian Paints Ace" data-price="14">Asian Paints Ace</option>');
-            //$('.int-fresh-paint').show();
-           // $(this).closest('select').find('.int-fresh-paint');
-           general_amount(); 
-            
-        });
-            
-       $('body').on('change','.rad2',function(){
-            $(".general-select").append(' <option value="Asian Paints Ace" data-price="14">Asian Paints Ace</option>');
-            
-        });
-            
-            
        $('body').on('click','.remove_row',function(){
          $(this).closest('.show-row').remove();
-         general_amount();
+//         general_amount();
         });
-            
             
             
         _.templateSettings.variable1 = "element";
@@ -429,12 +377,12 @@ jQuery(document).ready(function () {
                 i: _counter
             };
             $(".tbody2").hide().append(tpl1(tplData)).show('slow');
-            $('input[name="room-name2['+_counter+']"]').rules("add", {
-                required: true
-            });
-            $('input[name="appr-sqft2['+_counter+']"]').rules("add", {
-                required: true
-            });
+//            $('input[name="room-name2['+_counter+']"]').rules("add", {
+//                required: true
+//            });
+//            $('input[name="appr-sqft2['+_counter+']"]').rules("add", {
+//                required: true
+//            });
 //            $('input[name="radio2['+_counter+']"]').rules("add", {
 //                required: true
 //            });
@@ -455,107 +403,52 @@ jQuery(document).ready(function () {
         });
             
         
-        //______
-        
-                $('#mailme-id').click(function() {
-                $("#mailme-show").toggle('slow');
-        
+                    $('body').on('click', '.rad-paint' , function(){  
+                                var _that= $(this).closest('tr');
+                                 var indexval = $(this).data('val');
+                                  var paintselect = ( $(this).val() == "fresh" ) ? getfreshpaint(indexval) : getrepaint(indexval);
+                                  var val= _that.find('.paintclass').html(paintselect);
+                                  var general_rate= _that.find('.fresh_price').text('');
+                                   var general_amount= _that.find('.general_amount').text('');
                 });
         
-                            
-          //_____
-                
-
-//        $('.rad1').change(function() {
-//            alert('radd');
-//             $(".int-fresh-paint").show();                        
-//             $(".general-select").hide();
-//             $(".int-re-paint").hide();
-//                $(".general-rate").html("");
-//                $("#general-amount").html("");
-//                $("#int-appr-sqft").val("");
-//                 $('.int-fresh-paint').change(function() {
-//                 var pr = $(this).find(':selected').attr("data-price");
-//                 console.log(pr);
-//                 $(".general-rate").html(pr);
-//                $("#int-appr-sqft").val();
-//                var total_amount = ($("#int-appr-sqft").val())  *  $(".general-rate").html();
-//                $('#general-amount').html(total_amount);
-//                });
-//                });
-              
-//        $('.rad2').change(function() {
-//             $(".int-re-paint").show(); 
-//             $(".general-select").hide();  
-//             $(".int-fresh-paint").hide(); 
-//                $(".general-rate").html("");
-//                $("#general-amount").html("");
-//                $("#int-appr-sqft").val("");
-//                $('.int-re-paint').change(function() {
-//                var pr = $(this).find(':selected').attr("data-price");
-//                console.log(pr);
-//                $(".general-rate").html(pr);
-//                $("#int-appr-sqft").val();
-//                var total_amount = ($("#int-appr-sqft").val())  *  $(".general-rate").html();
-//                $('#general-amount').html(total_amount);
-//                
-//              });
-//              });
-                
-            $( "#int-appr-sqft" ).keyup(function() {
-                 var dInput = $(this).val();
-                 var rate = $('.general-rate').text();
-                 var total_amount = dInput * rate;
-                 $('#general-amount').html(total_amount);
-        
+                   $('body').on('blur keyup','.int-appr-sqft',function(){
+                                    var _that= $(this).closest('tr');
+                                     var approx_rate=  _that.find('.int-appr-sqft').val();
+                                     var freshpaint_price =_that.find(':selected').data('price'); 
+                                calculate(approx_rate,freshpaint_price,_that);
               });
                 
-                
-        
-        $('.rad3').change(function(){
-             $(".ext-fresh-paint").show();                        
-             $(".general-select2").hide();
-             $(".ext-re-paint").hide();
-                 $(".general-rate2").html("");
-                 $("#general-amount2").html("");
-                 $("#ext-appr-sqft").val("");
-                 $('.ext-fresh-paint').change(function() {
-                 var pr = $(this).find(':selected').attr("data-price");
-                 console.log(pr);
-                 $(".general-rate2").html(pr);
-                $("#ext-appr-sqft").val();
-                var total_amount = ($("#ext-appr-sqft").val())  *  $(".general-rate2").html();
-                $('#general-amount2').html(total_amount);
-                
-                });
+             $('body').on('change','.int-fresh-paint',function(){
+                                var _that=$(this).closest('tr');
+                                var freshpaint_price = $(this).find(':selected').data('price');   
+                              var general_rate= _that.find('.fresh_price').text(freshpaint_price);
+                                var approx_rate=  _that.find('.int-appr-sqft').val();
+                                calculate(approx_rate,freshpaint_price,_that);
                 });
                 
-        $('.rad4').change(function() {
-             $(".ext-re-paint").show(); 
-             $(".general-select2").hide();  
-             $(".ext-fresh-paint").hide(); 
-                $(".general-rate2").html("");
-                $("#general-amount2").html("");
-                $("#ext-appr-sqft").val("");
-                $('.ext-re-paint').change(function() {
-                var pr = $(this).find(':selected').attr("data-price");
-                console.log(pr);
-                $(".general-rate2").html(pr);
-                 $("#ext-appr-sqft").val();
-                var total_amount = ($("#ext-appr-sqft").val())  *  $(".general-rate2").html();
-                $('#general-amount2').html(total_amount);
-              });
+             $('body').on('change','.int-re-paint',function(){
+                                    var _that=$(this).closest('tr');
+                                  var freshpaint_price = $(this).find(':selected').data('price');   
+                                var general_rate=  _that.find('.fresh_price').text(freshpaint_price);
+                                  var approx_rate=  _that.find('.int-appr-sqft').val();
+                                    calculate(approx_rate,freshpaint_price,_that);
               });
    
-        $("#ext-appr-sqft").keyup(function() {
-                 var dInput = $(this).val();
-                 var rate2 = $('#general-rate2').html();
-                 var total_amount = dInput * rate2;
-                 $('#general-amount2').html(total_amount);
+            function calculate(approx_rate,freshpaint_price,_that){
         
+                            var total_amount = (freshpaint_price) ? (approx_rate * freshpaint_price) : '';
+                          _that.find('.general_amount').text(total_amount);
+                                 var sum = 0;
+                                   $(".general_amount").each(function() {
+                                         sum +=parseInt($(this).html());
+//                                    var currentElement = $('.general_amount').html();
+//                                    sum += currentElement; 
+           
               });
+              $('.total1').text(sum);
+                       }
             
-   //_______
    
             
             
@@ -628,15 +521,33 @@ jQuery(document).ready(function () {
            }     
       });
             
+        function getfreshpaint(indexval){
+           return '<select class="custom-select int-fresh-paint" name="selectfr["'+indexval+'"]" > '+
+                  '<option selected>Select</option> ' +
+                  '<option value="Asian Paints Tractor Emulsion" data-price="21">Asian Paints Tractor Emulsion</option> ' +
+                  '<option value="Asian Paints Apcolite Premium Emulsion" data-price="24">Asian Paints Apcolite Premium Emulsion</option> ' +
+                  '<option value="Asian Paints Apcolite Advance Matt Emulsion" data-price="26">Asian Paints Apcolite Advance Matt Emulsion</option> ' +
+                  '<option value="Asian Paints Royale Luxury Emulsion" data-price="30">Asian Paints Royale Luxury Emulsion</option> ' + 
+                  '<option value="Asian Paints Royale ATMOS" data-price="32">Asian Paints Royale ATMOS</option>' +
+                  '<option value="Asian Paints Royale ASPIRA" data-price="35">Asian Paints Royale ASPIRA </option>' +
+                  '</select>';
+   }
             
+   function getrepaint(indexval){
+            return  '<select class="custom-select int-re-paint" name="selectr1[0]">'+
+                       '<option selected>Select</option>'+
+                       '<option value="Asian Paints Tractor Emulsion" data-price="8">Asian Paints Tractor Emulsion (8)</option>'+
+                       '<option value="Asian Paints Apcolite Premium Emulsion" data-price="11">Asian Paints Apcolite Premium Emulsion</option>'+
+                       '<option value="Asian Paints Apcolite Advance Matt Emulsion" data-price="15">Asian Paints Apcolite Advance Matt Emulsion</option>'+
+                       '<option value="Asian Paints Royale Luxury Emulsion" data-price="19">Asian Paints Royale Luxury Emulsion</option>'+
+                       '<option value="Asian Paints Royale ATMOS" data-price="20">Asian Paints Royale ATMOS</option>'+
+                       '<option value="Asian Paints Royale ASPIRA" data-price="22">Asian Paints Royale ASPIRA</option>'+
+                       '</select>';
+    }
             
             //_______
    });
          
-                
-                
-                
-                
 JS;
     $this->registerJs($script, View::POS_END);
     ?>

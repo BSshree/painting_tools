@@ -47,12 +47,12 @@ use yii\widgets\ActiveForm;
             <input  type="text" id="phone" required="required" class="form-control" placeholder="Enter Your Phone Number" />
             <div class="errorMessage1"></div>
         </div>
-
-        <nav>
+        <button class="btn btn2 nextBtn" data-form="phone" id="phone_form" >Send OTP <span aria-hidden="true">&rarr;</span></button>
+<!--        <nav>
             <ul class="pager">
                 <li class="next"><a class="nextBtn" href="#" data-form="phone" id="phone_form">Send OTP <span aria-hidden="true">&rarr;</span></a></li>
             </ul>
-        </nav>
+        </nav>-->
 
     </div>
 </div>
@@ -67,12 +67,15 @@ use yii\widgets\ActiveForm;
             <input id="otp_no" type="text" required="required" class="form-control" placeholder="Enter Your OTP Number" />
             <div class="errorMessage"></div>
         </div>
-        <nav>
+    <button class="btn btn2 nextBtn previous prevBtn" data-form="phone" id="phone_form" >Previous <span aria-hidden="true">&rarr;</span></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <button class="btn btn2 nextBtn next nextBtn" data-form="otp" id="otp_form" >Next <span aria-hidden="true">&rarr;</span></button>
+
+<!--        <nav>
             <ul class="pager">
                 <li class="previous"><a class="prevBtn" href="#"><span aria-hidden="true">&larr;</span> Previous</a></li>
                 <li class="next"><a class="nextBtn" href="#" data-form="otp" id="otp_form">Next <span aria-hidden="true">&rarr;</span></a></li>
             </ul>
-        </nav>
+        </nav>-->
 
     </div>
 </div>
@@ -102,31 +105,36 @@ use yii\widgets\ActiveForm;
 
         $services = array(
                         '' => '--select--',
-                        'General painting' => 'General painting',
-                        'Gift a wall' => 'Gift a wall',
-                        'Concept walls' => 'Concept walls',
-                        'Designer walls' => 'Designer walls',
-                        'Wall paper' => 'Wall paper',
-                        'Royale play' => 'Royale play',
-                        'Home makeover' => 'Home makeover',
+                        'general-painting' => 'General painting',
+                        'gift-a-wall' => 'Gift a wall',
+                        'concept-walls' => 'Concept walls',
+                        'designer-walls' => 'Designer walls',
+                        'wall-paper' => 'Wall paper',
+                        'royale-play' => 'Royale play',
+                        'home-makeover' => 'Home makeover',
                         'Potraits/Metal murals/Statues' => 'Potraits/Metal murals/Statues',
                     );
          
-        echo $form->field($model, 'type_service')->textInput(['class' => 'form-control item-hide-load','required'=>true])->dropDownList($services)->label('Service'); ?>
- <div style="display:none" class="form-group show-item-hidden">
-     <label class="control-label">Service</label>
+        echo $form->field($model, 'type_service')->textInput(['class' => 'form-control','data-type'=>'item','required'=>true])->dropDownList($services)->label('Service'); ?>
+ 
+       <div style="display:none" class="form-group show-item-hidden">
+     <!--<label class="control-label">Service</label>-->
     <input id="item" type="text"  class="form-control item-default-load" />
     <!--<input id="item" type="text"  class="form-control" />-->
        </div>
       <?php  echo $form->field($model, 'mess')->textInput(['class' => 'form-control','maxlength' => true,'placeholder'=>'Enter Your Message'])->label('Message');
 
         ?>
-       
-        <nav>
-            <ul class="pager">
-                <li class="next"><?= Html::submitButton('SUBMIT!', ['class' => 'btn btn-success']) ?></li>
-            </ul>
-        </nav>
+    <div style="display:none" class="loading-image"><img src="themes/site_theme/images/ajax-loader.gif" alt=""><br></div>
+    
+    
+<!--        <nav>
+            <ul class="pager">-->
+                <!--<li class="next">-->
+      <?= Html::submitButton('SUBMIT!', ['class' => 'btn btn2']) ?>
+   <!--</li>-->
+<!--            </ul>
+        </nav>-->
         <?php ActiveForm::end(); ?>
     </div>
 </div>
@@ -138,174 +146,3 @@ use yii\widgets\ActiveForm;
         <h2>Request sent successfully</h2>
     </div>
 </div>
-
-<?php
-$sendotp = Yii::$app->getUrlManager()->createUrl("site/site/ajaxbookotp");
-//echo '<pre>';print_r($sendotp); exit;   
-$script = <<< JS
-
- $(document).ready(function () {
-        
-
-    var navListItems = $('div.setup-panel div a'),
-        allWells = $('.setup-content'),
-        allNextBtn = $('.nextBtn'),
-        allPrevBtn = $('.prevBtn');
-
-    allWells.hide();
-
-    navListItems.click(function (e) {
-        e.preventDefault();
-        var _target = $($(this).attr('href')),
-            _item = $(this);
-        var nextStepWizard = $(this).text();
-        
-        if(nextStepWizard == 1)
-            $('.stepwizard .progress-bar').animate({width:'0%'},0);
-        if(nextStepWizard == 2)
-            $('.stepwizard .progress-bar').animate({width:'33%'},0);
-        if(nextStepWizard == 3)
-            $('.stepwizard .progress-bar').animate({width:'66%'},0);
-        if(nextStepWizard == 4)
-            $('.stepwizard .progress-bar').animate({width:'100%'},0);
-        
-
-        if (!_item.hasClass('disabled')) {
-            navListItems.removeClass('btn-success').addClass('btn-default');
-            //navListItems.addClass('btn-default');
-            _item.addClass('btn-success');
-            allWells.hide();
-            _target.show();
-            _target.find('input:eq(0)').focus();
-        }
-    });
-
-    
-    allPrevBtn.click(function () {
-        var curStep = $(this).closest(".setup-content"),
-            curStepBtn = curStep.attr("id"),
-            prevStepWizard = $('div.setup-panel div a[href="#' + curStepBtn + '"]').parent().prev().children("a");
-
-        prevStepWizard.removeAttr('disabled').trigger('click');    
-    });
-    
-
-    $('div.setup-panel div a.btn-success').trigger('click');
-        
-                
-    $("#otp_form").click(function(){  
-        var curStep = $(this).closest(".setup-content"),
-            curStepBtn = curStep.attr("id"),
-            nextStepWizard = $('div.setup-panel div a[href="#' + curStepBtn + '"]').parent().next().children("a"),
-            curInputs = curStep.find("input[type='text'],input[type='url']");
-                
-        var otp_no = $("#otp_no").val();
-        $.ajax({
-                url  : '{$sendotp}',
-                type : 'POST',                   
-                data: {
-                  req_val: otp_no, 
-                  form: 'otp'
-                },
-                success: function(data) {
-                var result = JSON.parse( data );
-                    if(result['mgs'] == "success"){
-                        navListItems.eq(1).attr('disabled','');
-                        $(".errorMessage").empty();
-                        nextStepWizard.removeAttr('disabled').trigger('click');                    
-                    }else{
-                        $(".errorMessage").empty();
-                        $(".errorMessage").html( '<div class="help-block">'+result['mgs']+'</div>' );
-                    }
-                }
-           });         
-    });
-                
-    $("#phone_form").click(function(){     
-
-        var curStep = $(this).closest(".setup-content"),
-            curStepBtn = curStep.attr("id"),
-            nextStepWizard = $('div.setup-panel div a[href="#' + curStepBtn + '"]').parent().next().children("a"),
-            curInputs = curStep.find("input[type='text'],input[type='url']");
-                
-        var phone_no = $("#phone").val();
-        var filter = /^[0-9-+]+$/;
-        if(filter.test(phone_no)){
-
-        $.ajax({
-                url  : '{$sendotp}',
-                type : 'POST',                   
-                data: {
-                  req_val: phone_no, 
-                  form: 'phone'
-                },
-                success: function(data) {
-
-                var result = JSON.parse( data );
-                    if(result['mgs'] == "success"){
-                 $('#otp_no').val('');
-                 $(".errorMessage").empty();
-                        nextStepWizard.removeAttr('disabled').trigger('click');                    
-                    }
-                }
-           });       
-        }else{
-            $(".errorMessage1").html( '<div class="help-block">Please Enter Your Phone Number</div>' );
-        }
-    });
-    
-                
-                
-       $('#book-site').on('beforeSubmit', function(e) {
-            var curStep = $(this).closest(".setup-content"),
-            curStepBtn = curStep.attr("id"),
-            nextStepWizard = $('div.setup-panel div a[href="#' + curStepBtn + '"]').parent().next().children("a"),
-            curInputs = curStep.find("input[type='text'],input[type='url']");
-                
-    var form = $(this);
-    var formData = form.serialize();
-    $.ajax({
-        url: form.attr("action"),
-        type: form.attr("method"),
-        data: formData,
-        success: function (data) {
-            if(data == 'success'){
-                 navListItems.eq(2).attr('disabled','');
-                nextStepWizard.removeAttr('disabled').trigger('click'); 
-            }
-        },
-        error: function () {
-            alert("Something went wrong");
-        }
-    });
-}).on('submit', function(e){
-    e.preventDefault();
-});   
-    //____
-                
-                
-        var url = $(location).attr("href"),
-            parts = url.split("/"),
-            last_part = parts[parts.length-1];
-           // alert(last_part);
-         var res_str = last_part.replace(/-/g, ' ');    
-               // alert(res_str);
-                
-         //alert(res_str.ucfirst());
-         //var cap = ucfirst(res_str);     
-           //     alert(cap);
-                
-//         if(res_str = 'royale play calculator'){
-//            alert('royal');
-//                $('.field-sms-type_service').hide();
-//                $('.show-item-hidden').show();
-//                $('.item-default-load').val('royal-play');
-//                
-//           }
-                
-    
-}); 
-       
-JS;
-$this->registerJs($script, View::POS_END);
-?>

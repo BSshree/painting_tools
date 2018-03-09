@@ -79,6 +79,7 @@ class SiteController extends Controller
      public function actionPages($slug)
     {
         return $this->render('/pages/'.$slug);
+        //return $this->render('index', ['slugname' => $slug]);
     }
     
         

@@ -3,13 +3,17 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/opt/lampp/htdocs/painting_tools/branches/dev/frontend/modules/site/views/pages/home-makeover-calculator.php</file>
             <file>file:/opt/lampp/htdocs/painting_tools/branches/dev/frontend/modules/site/views/layouts/header.php</file>
             <file>file:/opt/lampp/htdocs/painting_tools/branches/dev/frontend/modules/site/views/pages/gift-a-wall.php</file>
-            <file>file:/opt/lampp/htdocs/painting_tools/branches/dev/frontend/web/themes/site_theme/css/bootstrap.min.css</file>
             <file>file:/opt/lampp/htdocs/painting_tools/branches/dev/frontend/web/themes/site_theme/css/popup.css</file>
+            <file>file:/opt/lampp/htdocs/painting_tools/branches/dev/frontend/modules/site/views/layouts/footer.php</file>
             <file>file:/opt/lampp/htdocs/painting_tools/branches/dev/frontend/modules/site/controllers/SiteController.php</file>
+            <file>file:/opt/lampp/htdocs/painting_tools/branches/dev/frontend/modules/site/views/site/index.php</file>
             <file>file:/opt/lampp/htdocs/painting_tools/branches/dev/frontend/modules/site/views/layouts/main.php</file>
             <file>file:/opt/lampp/htdocs/painting_tools/branches/dev/frontend/modules/site/views/site/bookotp.php</file>
+            <file>file:/opt/lampp/htdocs/painting_tools/branches/dev/frontend/web/themes/site_theme/css/style.css</file>
+            <file>file:/opt/lampp/htdocs/painting_tools/branches/dev/frontend/modules/site/views/pages/royale-play-calculator.php</file>
         </group>
     </open-files>
 </project-private>

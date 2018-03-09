@@ -1,3 +1,13 @@
+<?php
+
+use yii\bootstrap\Modal;
+use yii\data\ActiveDataProvider;
+use yii\grid\GridView;
+use yii\helpers\Html;
+use yii\helpers\Url;
+use yii\web\View;
+use yii\widgets\ActiveForm;
+?>
 <footer class="footer-cont">
   <div class="footer-row1">
     <div class="container">
@@ -51,5 +61,184 @@
   </div>
   <div class="footer-row2">
     <div class="container"> Copyright  © 2018 walldressup.com.  All Rights Reserved . </div>
+    <input type='hidden' name='slug-name' id='slug-id'>
   </div>
 </footer>
+<?php
+//$script = <<< JS
+//        
+//        $(document).ready(function () {
+//        
+//        
+//        
+//        });
+//JS;
+//$this->registerJs($script, View::POS_END);
+?>
+<?php
+$sendotp = Yii::$app->getUrlManager()->createUrl("site/site/ajaxbookotp");
+//echo '<pre>';print_r($sendotp); exit;   
+$script = <<< JS
+
+ $(document).ready(function () {
+        
+
+    var navListItems = $('div.setup-panel div a'),
+        allWells = $('.setup-content'),
+        allNextBtn = $('.nextBtn'),
+        allPrevBtn = $('.prevBtn');
+
+    allWells.hide();
+
+    navListItems.click(function (e) {
+        e.preventDefault();
+        var _target = $($(this).attr('href')),
+            _item = $(this);
+        var nextStepWizard = $(this).text();
+        
+        if(nextStepWizard == 1)
+            $('.stepwizard .progress-bar').animate({width:'0%'},0);
+        if(nextStepWizard == 2)
+            $('.stepwizard .progress-bar').animate({width:'33%'},0);
+        if(nextStepWizard == 3)
+            $('.stepwizard .progress-bar').animate({width:'66%'},0);
+        if(nextStepWizard == 4)
+            $('.stepwizard .progress-bar').animate({width:'100%'},0);
+        
+
+        if (!_item.hasClass('disabled')) {
+            navListItems.removeClass('btn-success').addClass('btn-default');
+            //navListItems.addClass('btn-default');
+            _item.addClass('btn-success');
+            allWells.hide();
+            _target.show();
+            _target.find('input:eq(0)').focus();
+        }
+    });
+
+    
+    allPrevBtn.click(function () {
+        var curStep = $(this).closest(".setup-content"),
+            curStepBtn = curStep.attr("id"),
+            prevStepWizard = $('div.setup-panel div a[href="#' + curStepBtn + '"]').parent().prev().children("a");
+
+        prevStepWizard.removeAttr('disabled').trigger('click');    
+    });
+    
+
+    $('div.setup-panel div a.btn-success').trigger('click');
+        
+                
+    $("#otp_form").click(function(){  
+        var curStep = $(this).closest(".setup-content"),
+            curStepBtn = curStep.attr("id"),
+            nextStepWizard = $('div.setup-panel div a[href="#' + curStepBtn + '"]').parent().next().children("a"),
+            curInputs = curStep.find("input[type='text'],input[type='url']");
+                
+        var otp_no = $("#otp_no").val();
+         $(".show-item-hidden").show(); 
+         $("#sms-type_service").hide(); 
+                 var url = $(location).attr("href"),
+            parts = url.split("/"),
+            last_part = parts[parts.length-1];
+            alert(last_part);
+         var res_str = last_part.replace(/-/g, ' ');    
+                alert(res_str);
+                $('.item-default-load').val(res_str);
+        $.ajax({
+                url  : '{$sendotp}',
+                type : 'POST',                   
+                data: {
+                  req_val: otp_no, 
+                  form: 'otp'
+                },
+                success: function(data) {
+                var result = JSON.parse( data );
+                    if(result['mgs'] == "success"){
+                        navListItems.eq(1).attr('disabled','');
+                        $(".errorMessage").empty();
+                        nextStepWizard.removeAttr('disabled').trigger('click');                    
+                    }else{
+                        $(".errorMessage").empty();
+                        $(".errorMessage").html( '<div class="help-block">'+result['mgs']+'</div>' );
+                    }
+                }
+           });         
+    });
+                
+    $("#phone_form").click(function(){     
+
+        var curStep = $(this).closest(".setup-content"),
+            curStepBtn = curStep.attr("id"),
+            nextStepWizard = $('div.setup-panel div a[href="#' + curStepBtn + '"]').parent().next().children("a"),
+            curInputs = curStep.find("input[type='text'],input[type='url']");
+                
+        var phone_no = $("#phone").val();
+        var filter = /^[0-9-+]+$/;
+        if(filter.test(phone_no)){
+
+        $.ajax({
+                url  : '{$sendotp}',
+                type : 'POST',                   
+                data: {
+                  req_val: phone_no, 
+                  form: 'phone'
+                },
+                success: function(data) {
+
+                var result = JSON.parse( data );
+                    if(result['mgs'] == "success"){
+                 $('#otp_no').val('');
+                 $(".errorMessage").empty();
+                        nextStepWizard.removeAttr('disabled').trigger('click');                    
+                    }
+                }
+           });       
+        }else{
+            $(".errorMessage1").html( '<div class="help-block">Please Enter Your Phone Number</div>' );
+        }
+    });
+    
+                
+                
+       $('#book-site').on('beforeSubmit', function(e) {
+            var curStep = $(this).closest(".setup-content"),
+            curStepBtn = curStep.attr("id"),
+            nextStepWizard = $('div.setup-panel div a[href="#' + curStepBtn + '"]').parent().next().children("a"),
+            curInputs = curStep.find("input[type='text'],input[type='url']");
+                
+    var form = $(this);
+    var formData = form.serialize();
+    $(".loading-image").show();   
+   
+    $.ajax({
+        url: form.attr("action"),
+        type: form.attr("method"),
+        data: formData,
+        success: function (data) {
+            if(data == 'success'){
+                 navListItems.eq(2).attr('disabled','');
+                nextStepWizard.removeAttr('disabled').trigger('click'); 
+                 $(".loading-image").hide(); 
+            }
+        },
+        error: function () {
+            alert("Something went wrong");
+        }
+    });
+}).on('submit', function(e){
+    e.preventDefault();
+});   
+    //____
+                
+ 
+    
+                
+                
+                
+}); 
+       
+JS;
+$this->registerJs($script, View::POS_END);
+?>
+

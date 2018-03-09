@@ -31,8 +31,8 @@ $this->title ='Wall Dressup - Gift a wall';
                         </ul>
                     </div>
                     <div class="text-center book-btn-cont">
-                        <!--<a href="#" class="book-btn"> Book Now !</a>-->
-            <?= Html::button('Book Now !', ['value'=>Url::to('/bookotp'),'class' => 'book-btn  modalButton']) ?>
+                        <a href="#" class="book-btn" data-toggle="modal" data-target="#Bookanotp"> Book Now !</a>
+            <?php //Html::button('Book Now !', ['value'=>Url::to('/bookotp'),'class' => 'book-btn  modalButton']) ?>
              </div>   </div>
             </div>
             <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-lg-4 col-xl-4">
@@ -51,8 +51,9 @@ $this->title ='Wall Dressup - Gift a wall';
                         </ul>
                     </div>
                     <div class="text-center book-btn-cont"> 
+                      <a href="#" class="book-btn" data-toggle="modal" data-target="#Bookanotp"> Book Now !</a>
                         <!--<a href="#" class="book-btn"> Book Now !</a>-->
-                     <?= Html::button('Book Now !', ['value'=>Url::to('/bookotp'),'class' => 'book-btn modalButton']) ?>
+                     <?php // Html::button('Book Now !', ['value'=>Url::to('/bookotp'),'class' => 'book-btn modalButton']) ?>
                     </div>
                 </div>
             </div>
@@ -71,13 +72,14 @@ $this->title ='Wall Dressup - Gift a wall';
                         </ul>
                     </div>
                     <div class="text-center book-btn-cont">
-                        <!--<a href="#" class="book-btn"> Book Now !</a>--> 
-                    <?= Html::button('Book Now !', ['value'=>Url::to('/bookotp'),'class' => 'book-btn  modalButton']) ?>
+                    <a href="#" class="book-btn" data-toggle="modal" data-target="#Bookanotp"> Book Now !</a>
+                    <?php // Html::button('Book Now !', ['value'=>Url::to('/bookotp'),'class' => 'book-btn  modalButton']) ?>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    
 </section>
 <?php echo $this->render('@frontend/modules/site/views/partials/_gift_a_wall_gallery'); ?> 
 <?php echo $this->render('@frontend/modules/site/views/partials/inner_testimonials'); ?> 

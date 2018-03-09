@@ -177,9 +177,9 @@ $this->title = 'Wall Dressup - Royale Play-Calculator';
                                     </div>
                                 </div></div>
                             <div class="modal-footer text-center">
-                                <!--<button type="button" class="btn btn2">Book An Appointment</button>-->
-                                <?= Html::button('Book An Appointment', ['value' => Url::to('/bookotp'), 'class' => 'btn btn2  modalButton']) ?>
+                                <?php //Html::button('Book An Appointment', ['value' => Url::to('/bookotp'), 'class' => 'btn btn2  modalButton']) ?>
                                 <?php // Html::button('Mail me', ['value'=>Url::to('/mailme'),'class' => 'btn btn1  modalButton']) ?>
+                                 <button type="button" class="btn btn2"data-toggle="modal" data-target="#Bookanotp">Book An Appointment</button>
 
                                 <button type="button" class="btn btn1" id="mailme-id">Mail me</button>
                             </div>
